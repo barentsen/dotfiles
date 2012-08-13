@@ -1,6 +1,8 @@
 dotfiles
 ========
 
- A set of configuration files used by Geert.
+ Linux/Mac configuration files used by Geert.
 
- Run ./sync.sh to install these.
+ Inspired by
+ https://github.com/mathiasbynens/dotfiles
+(thanks!)
