@@ -1,6 +1,8 @@
 ################################################################
 # Bash prompt configuration, shamelessly adapted from 
 # http://apwhelan.blogspot.co.uk/2012/08/bash-prompt-coloring.html 
+# and
+# https://github.com/mathiasbynens/dotfiles/blob/master/.bash_prompt
 #
 # See link for fill reference:
 # http://bash-hackers.org/wiki/doku.php/scripting/terminalcodes
@@ -25,42 +27,15 @@
 # function properly (since the shell doesn't know how
 # long the prompt is).
 
-#COL_BLACK=$'\[\033[30m\]'
-#COL_RED=$'\[\033[31m\]'
-#COL_GREEN=$'\[\033[32m\]'
-#COL_YELLOW_ORANGE=$'\[\033[33m\]'
-#COL_BLUE=$'\[\033[34m\]'
-#COL_MAGENTA=$'\[\033[35m\]'
-#COL_CYAN=$'\[\033[36m\]'
-#COL_NORM=$'\[\033[39m\]'
-#PMPT_BOLD=$'\[\033[1m\]'
-#PMPT_NORM=$'\[\033[0m\]'
-
 # See: http://networking.ringofsaturn.com/Unix/Bash-prompts.php
 # for a longer list of colours.
 
-# actual command that sets prompt
-
-#PS1="${PMPT_BOLD}${COL_RED}\h${COL_NORM} [\w] %${PMPT_NORM} "
-
-COL_NORM="\033[1;39m"
-#BLACK="\033[1;30m"
-MAGENTA="\033[1;31m"
-#ORANGE="\033[1;33m"
-#GREEN="\033[1;32m"
+NORM="\033[1;39m"
+RED="\033[1;31m"
 BLUE="\033[1;34m"
-#PURPLE="\033[1;35m"
-WHITE="\033[1;37m"
 BOLD=""
 RESET="\033[m"
 
-#export MAGENTA
-#export ORANGE
-#export GREEN
-#export PURPLE
-#export WHITE
-#export BOLD
-#export RESET
 
 function parse_git_dirty() {
 [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
@@ -70,6 +45,8 @@ function parse_git_branch() {
 git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
 }
 
-export PS1="\[${BOLD}${BLUE}\]\u\[$RESET\]@\[$MAGENTA\]\h\[$RESET\]:\[${BOLD}${COL_NORM}\]\w\[$MAGENTA\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" #\")\$(parse_git_branch)\[$RESET\]\$ "
+# actual command that sets prompt
+#PS1="${PMPT_BOLD}${COL_RED}\h${NORM} [\w] %${PMPT_NORM} "
+export PS1="\[${BOLD}${BLUE}\]\u\[$RESET\]@\[$RED\]\h\[$RESET\]:\[${BOLD}${NORM}\]\w\[$RED\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" #\")\$(parse_git_branch)\[$RESET\]\$ "
 # For multi-line commands:
-export PS2="\[$COL_NORM\]→ \[$RESET\]"
+export PS2="\[$NORM\]→ \[$RESET\]"
