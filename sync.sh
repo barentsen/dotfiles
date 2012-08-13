@@ -1,13 +1,15 @@
 #!/bin/bash
 
-# Create a backup dir to hold dotfiles that will be replaced
+# This script will install the configuration files into the relevant places
+
+# Create a backup dir to copy the existing dotfiles into
 if [ ! -r backup ]; then
 	echo "Creating backup/ directory"
 	mkdir backup
 fi
 
 # Install dotfiles in the homedir
-for file in .{bashrc,bash_profile,bash_prompt,aliases,extra}; do
+for file in .{bashrc,bash_profile,bash_prompt,path,aliases,extra}; do
 	if [ -r "$file" ]; then
 
 		# If a (non-symlink) file exists, backup and remove
