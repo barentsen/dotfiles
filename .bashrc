@@ -22,6 +22,14 @@ for file in ~/.{path,path_local}; do
 done
 
 
+# Options specific to Herts (using regex on $HOSTNAME)
+if [[ $HOSTNAME =~ .*herts.* ]]; then
+    alias lj2='lpr -Plj2'
+    alias lj3='lpr -Plj3'
+    alias ljc2='lpr -Pljc2'
+fi
+
+
 # EPD Python installation
 export EPDDIR=~/bin/epd-7.3-1-rh5-x86_64
 export PYTHONPATH="$EPDDIR/lib/python2.7/site-packages/:$HOME/dev/pygaps"
@@ -49,7 +57,6 @@ shopt -s cdspell
 # Check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS
 shopt -s checkwinsize
-
 
 # Cleanup
 unset file
