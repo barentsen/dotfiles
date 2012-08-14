@@ -16,27 +16,47 @@ done
 
 
 
-# Set the $PATH
+#########
+# $PATH
+#########
 colonise() {
 	cat $1 | tr "\n" ":"
 }
+# Path settings are stored in ~/.path and ~/.path_local; one line per entry
 for file in ~/.{path,path_local}; do
 	[ -r "$file" ] && export PATH=`colonise $file`:$PATH
 done
+unset file
 
+
+###################
+# MACHINE-SPECIFIC
+###################
 
 # Options specific to Herts (using regex on $HOSTNAME)
 if [[ $HOSTNAME =~ .*herts.* ]]; then
+	# EPD Python installation
+	export PYTHONDIR="~/bin/epd-7.3-1-rh5-x86_64"
+	# Printers
     alias lj2='lpr -Plj2'
     alias lj3='lpr -Plj3'
     alias ljc2='lpr -Pljc2'
 fi
 
 
-# EPD Python installation
-export EPDDIR=~/bin/epd-7.3-1-rh5-x86_64
-export PYTHONPATH="$EPDDIR/lib/python2.7/site-packages/:$HOME/dev/pygaps"
-alias pip="pip -E $EPDDIR"
+#########
+# PYTHON
+#########
+if [ ! -z "$PYTHONDIR" ]; then
+	export PATH="$PYTHONDIR/bin":$PATH
+	export PYTHONPATH="$PYTHONDIR/lib/python2.7/site-packages/:$HOME/dev/pygaps"
+	alias pip="pip -E $PYTHONDIR"
+fi
+
+
+################
+# SHELL OPTIONS
+################
 
 # Setup ls to use colours for a LIGHT BACKGROUND!
 # The LS_COLORS command was produced using "dircolors -b /etc/DIR_COLORS.lightbgcolor"
@@ -58,5 +78,3 @@ shopt -s cdspell
 # update the values of LINES and COLUMNS
 shopt -s checkwinsize
 
-# Cleanup
-unset file
