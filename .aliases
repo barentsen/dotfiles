@@ -3,6 +3,10 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias ll='ls -lsha'
 
+# Git
+alias gp='git pull'
+alias gc='git commit -am '
+
 # Radio
 VLCPLAY="nohup vlc --qt-start-minimized"
 alias stubru="$VLCPLAY http://mp3.streampower.be/stubru-high.mp3 2> /dev/null &"

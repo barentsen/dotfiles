@@ -36,7 +36,7 @@ unset file
 # Options specific to Herts (using regex on $HOSTNAME)
 if [[ $HOSTNAME =~ .*herts.* ]]; then
 	# EPD Python installation
-	export PYTHONDIR="~/bin/epd-7.3-1-rh5-x86_64"
+	export PYTHONDIR="/home/gb/bin/epd-7.3-1-rh5-x86_64"
 	# Printers
     alias lj2='lpr -Plj2'
     alias lj3='lpr -Plj3'
@@ -49,8 +49,9 @@ fi
 #########
 if [ ! -z "$PYTHONDIR" ]; then
 	export PATH="$PYTHONDIR/bin":$PATH
-	export PYTHONPATH="$PYTHONDIR/lib/python2.7/site-packages/:$HOME/dev/pygaps"
-	alias pip="pip -E $PYTHONDIR"
+	export PYTHONPATH="$PYTHONDIR/lib/python2.7/site-packages/:$HOME/dev/pygaps:$HOME/dev/meteorpy"
+	export PYTHONHOME=$PYTHONDIR
+	#alias pip="pip -E $PYTHONDIR"
 fi
 
 
