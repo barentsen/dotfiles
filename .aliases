@@ -1,17 +1,13 @@
+# Shorthands
+alias d="cd ~/dev"
+alias p="cd ~/proj"
+alias gp='git pull'
+alias gc='git commit -am '
+
 # System tools
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias ll='ls -lsha'
-
-# Git
-alias gp='git pull'
-alias gc='git commit -am '
-
-# Radio
-VLCPLAY="nohup vlc --qt-start-minimized"
-alias stubru="$VLCPLAY http://mp3.streampower.be/stubru-high.mp3 2> /dev/null &"
-alias rad1="$VLCPLAY http://mp3.streampower.be/radio1-high.mp3 2> /dev/null &"
-alias radu="$VLCPLAY http://bbc.co.uk/radio/listen/live/ru.asx 2> /dev/null &"
 
 # Science tools
 alias ipy="ipython --colors=LightBG"
@@ -25,3 +21,11 @@ alias csv2fits="stilts tcopy ifmt=csv $1 $2"
 
 # PostgreSQL
 alias startdb="pg_ctl -D /home/gb/local/msc/pgdata -l ~/local/tmp/pg.log start"
+alias startmongo="mongod --dbpath /home/gb/msc/mongodata --logpath /home/gb/tmp/mongodb.log --logappend --fork"
+
+# Radio
+VLCPLAY="nohup vlc --qt-start-minimized"
+alias stubru="$VLCPLAY http://mp3.streampower.be/stubru-high.mp3 2> /dev/null &"
+alias rad1="$VLCPLAY http://mp3.streampower.be/radio1-high.mp3 2> /dev/null &"
+alias radu="$VLCPLAY http://bbc.co.uk/radio/listen/live/ru.asx 2> /dev/null &"
+
