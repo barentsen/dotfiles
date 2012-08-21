@@ -21,7 +21,7 @@ alias csv2fits="stilts tcopy ifmt=csv $1 $2"
 
 # PostgreSQL
 alias startdb="pg_ctl -D /home/gb/local/msc/pgdata -l ~/local/tmp/pg.log start"
-alias startmongo="mongod --dbpath /home/gb/msc/mongodata --logpath /home/gb/tmp/mongodb.log --logappend --fork"
+alias startmongo="mongod --port 4230 --dbpath ~/msc/mongodata --logpath ~/tmp/mongodb.log --logappend --fork"
 
 # Radio
 VLCPLAY="nohup vlc --qt-start-minimized"
