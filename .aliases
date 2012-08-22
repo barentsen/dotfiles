@@ -19,9 +19,11 @@ alias tc='java -Xmx4000m -jar ~/bin/topcat-full.jar:~/bin/postgresql.jdbc4.jar -
 alias stilts="tc -stilts"
 alias csv2fits="stilts tcopy ifmt=csv $1 $2"
 
-# PostgreSQL
+# Databases
 alias startdb="pg_ctl -D /home/gb/local/msc/pgdata -l ~/local/tmp/pg.log start"
 alias startmongo="mongod --port 4230 --dbpath ~/msc/mongodata --logpath ~/tmp/mongodb.log --logappend --fork"
+alias mongo="mongo --port 4230"
+
 
 # Radio
 VLCPLAY="nohup vlc --qt-start-minimized"
