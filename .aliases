@@ -21,6 +21,7 @@ alias csv2fits="stilts tcopy ifmt=csv $1 $2"
 
 # Databases
 alias startdb="pg_ctl -D /home/gb/local/msc/pgdata -l ~/local/tmp/pg.log start"
+alias pglocal="pg_ctl -D /home/gb/local/msc/pgdata -l ~/local/tmp/pg.log "
 alias startmongo="mongod --port 4230 --dbpath ~/msc/mongodata --logpath ~/tmp/mongodb.log --logappend --fork"
 alias mongo="mongo --port 4230"
 
