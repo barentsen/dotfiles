@@ -1,2 +1,5 @@
 backup
 .extra
+
+dotfiles.sublime-project
+dotfiles.sublime-workspace
