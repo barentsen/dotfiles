@@ -10,7 +10,7 @@ export OS=$(uname)
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{bash_prompt,aliases,functions,extra}; do
+for file in ~/.{bash_prompt,aliases,extra}; do
 	[ -r "$file" ] && source "$file"
 done
 
@@ -68,6 +68,7 @@ export LS_COLORS='rs=0:di=00;34:ln=00;36:mh=00:pi=40;33:so=00;35:do=00;35:bd=40;
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(lesspipe)"
+[ -x /usr/bin/lesspipe.sh ] && eval "$(lesspipe.sh)"
 
 # Don't put duplicate lines or lines starting with space in the history
 export HISTCONTROL=ignoreboth
@@ -84,7 +85,4 @@ shopt -s cdspell
 # Check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS
 shopt -s checkwinsize
-
-# make less more friendly for non-text input files, see lesspipe(1)
-[ -x /usr/bin/lesspipe ] && eval "$(lesspipe)"
 
