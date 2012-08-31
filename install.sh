@@ -9,7 +9,7 @@ if [ ! -r backup ]; then
 fi
 
 # Install dotfiles in the homedir
-for file in .{bashrc,bash_profile,bash_prompt,path,aliases,extra}; do
+for file in .{bashrc,bash_profile,bash_prompt,path,aliases,apparix,extra}; do
 	if [ -r "$file" ]; then
 
 		# If a (non-symlink) file exists, backup and remove
