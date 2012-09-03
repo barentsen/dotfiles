@@ -229,8 +229,8 @@ axes.color_cycle    : 348ABD, 7A68A6, A60628, 467821, CF4457, 188487, E24A33 #b,
 
 ### TICKS
 # see http://matplotlib.sourceforge.net/api/axis_api.html#matplotlib.axis.Tick
-xtick.major.size     : 6      # major tick size in points
-xtick.minor.size     : 3      # minor tick size in points
+xtick.major.size     : 8      # major tick size in points
+xtick.minor.size     : 4      # minor tick size in points
 xtick.major.pad      : 4      # distance to major tick label in points
 xtick.minor.pad      : 4      # distance to the minor tick label in points
 xtick.color          : 444444      # color of the tick labels
