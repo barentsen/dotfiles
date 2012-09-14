@@ -43,6 +43,12 @@ if [[ $HOSTNAME =~ .*herts.* ]]; then
     alias ljc2='lpr -Pljc2'
 fi
 
+if [[ $HOSTNAME =~ .*geertbook.* ]]; then
+	#export PYTHONHOME="/Library/Frameworks/EPD64.framework/Versions/7.3/lib/python2.7/site-packages/"
+	export PYTHONPATH="$PYTHONHOME:$HOME/bin/python/lib/python2.7/site-packages:$HOME/proj/pygaps"
+	#export PYTHONDIR="$HOME/bin/python"
+fi
+
 
 #########
 # PYTHON
