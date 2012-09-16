@@ -11,8 +11,8 @@ alias ll='ls -lsha'
 
 # Science tools
 alias ipy="ipython --colors=LightBG"
-alias je="java -jar ~/bin/jEdit/5.0pre1/jedit.jar"
-alias aladin="java -Xmx6000m -jar ~/bin/aladin/Aladin.jar"
+alias je="java -jar $HOME/bin/jEdit/5.0pre1/jedit.jar"
+alias aladin="java -Xmx6000m -jar $HOME/bin/aladin/Aladin.jar"
 
 # TopCat
 alias tc='java -Xmx4000m -classpath $HOME/bin/topcat-full.jar:$HOME/bin/postgresql.jdbc4.jar -Djdbc.drivers=org.postgresql.Driver uk.ac.starlink.topcat.Driver'
@@ -20,9 +20,9 @@ alias stilts="tc -stilts"
 alias csv2fits="stilts tcopy ifmt=csv ofmt=fits-plus $1 $2"
 
 # Databases
-alias startdb="pg_ctl -D /home/gb/local/msc/pgdata -l ~/local/tmp/pg.log start"
-alias pglocal="pg_ctl -D /home/gb/local/msc/pgdata -l ~/local/tmp/pg.log "
-alias startmongo="mongod --port 4230 --dbpath ~/msc/mongodata --logpath ~/tmp/mongodb.log --logappend --fork"
+alias startdb="pg_ctl -D $HOME/msc/pgdata -l $HOME/tmp/pg.log start"
+alias pglocal="pg_ctl -D $HOME/msc/pgdata -l $HOME/tmp/pg.log "
+alias startmongo="mongod --port 4230 --dbpath $HOME/msc/mongodata --logpath $HOME/tmp/mongodb.log --logappend --fork"
 alias mongo="mongo --port 4230"
 
 
