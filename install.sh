@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # This script will install the configuration files into the relevant places
 
 # Create a backup dir to copy the existing dotfiles into
