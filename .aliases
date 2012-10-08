@@ -23,11 +23,13 @@ alias csv2fits="stilts tcopy ifmt=csv ofmt=fits-plus $1 $2"
 alias startdb="pg_ctl -D $HOME/msc/pgdata -l $HOME/tmp/pg.log start"
 alias pglocal="pg_ctl -D $HOME/msc/pgdata -l $HOME/tmp/pg.log "
 alias startmongo="mongod --port 4230 --dbpath $HOME/msc/mongodata --logpath $HOME/tmp/mongodb.log --logappend --fork"
+# Mac: mongod run --config /usr/local/etc/mongod.conf
 alias mongo="mongo --port 4230"
 
 
 # Radio
-VLCPLAY="nohup vlc --qt-start-minimized"
+#VLCPLAY="nohup vlc --qt-start-minimized"
+VLCPLAY="nohup vlc"
 alias stubru="$VLCPLAY http://mp3.streampower.be/stubru-high.mp3 2> /dev/null &"
 alias rad1="$VLCPLAY http://mp3.streampower.be/radio1-high.mp3 2> /dev/null &"
 alias radu="$VLCPLAY http://bbc.co.uk/radio/listen/live/ru.asx 2> /dev/null &"
