@@ -45,7 +45,7 @@ backend      : WXAgg
 # you if backend_fallback is True
 #backend_fallback: True
 
-#interactive  : False
+interactive  : True
 #toolbar      : toolbar2   # None | classic | toolbar2
 #timezone     : UTC        # a pytz timezone string, eg US/Central or Europe/Paris
 
