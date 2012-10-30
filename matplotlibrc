@@ -286,7 +286,7 @@ figure.edgecolor : 0.50   # figure edgecolor
 figure.subplot.left    : 0.08  # the left side of the subplots of the figure
 figure.subplot.bottom  : 0.1    # the bottom of the subplots of the figure
 figure.subplot.right   : 0.97    # the right side of the subplots of the figure
-figure.subplot.top     : 0.9    # the top of the subplots of the figure
+figure.subplot.top     : 0.90    # the top of the subplots of the figure
 figure.subplot.wspace  : 0.2    # the amount of width reserved for blank space between subplots
 figure.subplot.hspace  : 0.25    # the amount of height reserved for white space between subplots
 
