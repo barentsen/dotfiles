@@ -1,3 +1,4 @@
+~/bin
 ~/bin/bin
 ~/bin/Montage_v3.3
 ~/bin/pgsql/bin
@@ -8,8 +9,9 @@
 ~/bin/casutools/bin
 ~/bin/Sublime\ Text\ 2
 ~/bin/mongodb/bin
+~/.dropbox-dist
+~/bin/python/bin
 ~/bin/mpi/bin
-~/.dropbox-dist/
 
 /Library/Frameworks/EPD64.framework/Versions/Current/bin
 /usr/local/Cellar/coreutils/8.17/libexec/gnubin

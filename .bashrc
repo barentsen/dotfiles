@@ -47,8 +47,12 @@ fi
 
 if [[ $HOSTNAME =~ .*geertbook.* ]]; then
 	#export PYTHONHOME="/Library/Frameworks/EPD64.framework/Versions/7.3/lib/python2.7/site-packages/"
-	export PYTHONPATH="$PYTHONHOME:$HOME/bin/python/lib/python2.7/site-packages:$HOME/proj/pygaps"
-	#export PYTHONDIR="$HOME/bin/python"
+	#export PYTHONPATH="$PYTHONHOME:$HOME/bin/python/lib/python2.7/site-packages:$HOME/proj/pygaps"
+	export PYTHONDIR="/Library/Frameworks/EPD64.framework/Versions/7.3"
+	export PYTHONDIR2="$HOME/bin/python"
+	#alias pip="pip --target $PYTHONDIR2/lib/python2.7/site-packages"
+	alias vlc="/Applications/VLC.app/Contents/MacOS/VLC"
+	alias subl="/Applications/Sublime\ Text\ 2.app/Contents/MacOS/Sublime\ Text\ 2"
 fi
 
 
@@ -58,11 +62,10 @@ fi
 if [ ! -z "$PYTHONDIR" ]; then
 	export PATH="$PYTHONDIR/bin":$PATH
 	# Distribution packages dir
-	export PYTHONPATH="$PYTHONDIR/lib/python2.7/site-packages/"
+	export PYTHONPATH="$PYTHONDIR/lib/python2.7/site-packages/:$HOME/bin/python/lib/python2.7/site-packages/"
 	# Packages being developed
 	export PYTHONPATH="$PYTHONPATH:$HOME/dev/pygaps:$HOME/dev/meteorpy:$HOME/dev/meteor-fluxviewer"
 	export PYTHONHOME=$PYTHONDIR
-	#alias pip="pip -E $PYTHONDIR"
 fi
 
 
