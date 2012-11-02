@@ -45,7 +45,7 @@ RESET="\033[m"
 if [[ $HOSTNAME = 'uhppc11.herts.ac.uk' ]]; then
     HOSTCOL=$RED
 elif [[ $HOSTNAME = 'stri-cluster.herts.ac.uk' ]]; then
-    HOSTCOL=$YELLOW
+    HOSTCOL=$GREEN
 else
     HOSTCOL=$PURPLE
 fi
