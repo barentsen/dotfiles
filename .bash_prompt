@@ -40,15 +40,17 @@ LIGHTBLUE="\033[1;36m"
 WHITE_ON_BLUE="\033[37;44m"
 BLUE_ON_WHITE="\033[1;34;47m"
 RED_ON_WHITE="\033[1;31;47m"
+WHITE_ON_GREEN="\033[1;37;42m"
+WHITE_ON_RED="\033[1;37;41m"
 BOLD=""
 RESET="\033[m"
 
 
 # Let the color of the hostname depend on the machine!
 if [[ $HOSTNAME = 'uhppc11.herts.ac.uk' ]]; then
-    HOSTCOL=$BLUE_ON_WHITE
+    HOSTCOL=$WHITE_ON_GREEN
 elif [[ $HOSTNAME = 'stri-cluster.herts.ac.uk' ]]; then
-    HOSTCOL=$RED_ON_WHITE
+    HOSTCOL=$WHITE_ON_RED
 else
     HOSTCOL=$BLUE
 fi
