@@ -38,9 +38,8 @@ if [[ $HOSTNAME =~ .*herts.* ]]; then
 	# EPD Python installation
 	export PYTHONDIR="/home/gb/bin/epd-7.3-1-rh5-x86_64"
 	# Printers
-    alias lj2='lpr -Plj2'
-    alias lj3='lpr -Plj3'
-    alias ljc2='lpr -Pljc2'
+    alias prnt='lpr -Plj3' # Print in black/white
+    alias prntc='lpr -Pljc3' # Print in colour
     # Others
     alias gaia='/soft/star-namaka-64bit/bin/gaia/gaia_standalone.csh'
 fi
