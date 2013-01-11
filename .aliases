@@ -2,7 +2,7 @@
 alias d="cd ~/dev"
 alias p="cd ~/proj"
 alias gp='git pull'
-alias gc='git commit -am '
+alias gc='git commit --verbose -am '
 
 # System tools
 alias ls='ls --color=auto'
