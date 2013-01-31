@@ -13,6 +13,7 @@
 ~/.dropbox-dist
 ~/bin/python/bin
 ~/bin/mpi/bin
+~/bin/ffmpeg
 
 ~/bin/src/wcstools-3.8.6/bin
 
