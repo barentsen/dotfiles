@@ -44,7 +44,7 @@ if [[ $HOSTNAME =~ .*herts.* ]]; then
     alias gaia='/soft/star-namaka-64bit/bin/gaia/gaia_standalone.csh'
 fi
 
-if [[ $HOSTNAME =~ .*GeertBook.* ]]; then
+if [[ $HOSTNAME =~ .*geertbook.* ]]; then
 	#export PYTHONHOME="/Library/Frameworks/EPD64.framework/Versions/7.3/lib/python2.7/site-packages/"
 	#export PYTHONPATH="$PYTHONHOME:$HOME/bin/python/lib/python2.7/site-packages:$HOME/proj/pygaps"
 	export PYTHONDIR="/Library/Frameworks/EPD64.framework/Versions/7.3"
