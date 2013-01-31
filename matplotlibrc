@@ -124,7 +124,7 @@ font.family         : sans-serif
 # settings for axes and ticks. Special text sizes can be defined
 # relative to font.size, using the following values: xx-small, x-small,
 # small, medium, large, x-large, xx-large, larger, or smaller
-#font.size           : 12.0
+font.size           : 14.0
 #font.serif          : Bitstream Vera Serif, New Century Schoolbook, Century Schoolbook L, Utopia, ITC Bookman, Bookman, Nimbus Roman No9 L, Times New Roman, Times, Palatino, Charter, serif
 font.sans-serif      : Myriad Pro, Bitstream Vera Sans, Lucida Grande, Verdana, Geneva, Lucid, Arial, Helvetica, Avant Garde, sans-serif
 #font.cursive        : Apple Chancery, Textile, Zapf Chancery, Sand, cursive
@@ -136,7 +136,7 @@ font.sans-serif      : Myriad Pro, Bitstream Vera Sans, Lucida Grande, Verdana, 
 # http://matplotlib.sourceforge.net/api/artist_api.html#module-matplotlib.text for more
 # information on text properties
 
-text.color          : 444444
+text.color          : 333333
 
 ### LaTeX customizations. See http://www.scipy.org/Wiki/Cookbook/Matplotlib/UsingTex
 #text.usetex         : False  # use latex for all text handling. The following fonts
@@ -206,7 +206,7 @@ axes.grid           : False   # display grid or not
 axes.titlesize      : x-large   # fontsize of the axes title
 axes.labelsize      : x-large  # fontsize of the x any y labels
 axes.labelweight    : normal  # weight of the x and y labels
-axes.labelcolor     : 444444
+axes.labelcolor     : 333333
 axes.axisbelow      : True   # whether axis gridlines and ticks are below
                               # the axes elements (lines, text, etc)
 #axes.formatter.limits : -7, 7 # use scientific notation if log10
@@ -234,16 +234,16 @@ xtick.major.size     : 8      # major tick size in points
 xtick.minor.size     : 4      # minor tick size in points
 xtick.major.pad      : 4      # distance to major tick label in points
 xtick.minor.pad      : 4      # distance to the minor tick label in points
-xtick.color          : 444444      # color of the tick labels
-xtick.labelsize      : medium # fontsize of the tick labels
+xtick.color          : 333333      # color of the tick labels
+xtick.labelsize      : large # fontsize of the tick labels
 xtick.direction      : in     # direction: in or out
 
 ytick.major.size     : 6      # major tick size in points
 ytick.minor.size     : 3      # minor tick size in points
 ytick.major.pad      : 5      # distance to major tick label in points
 ytick.minor.pad      : 5      # distance to the minor tick label in points
-ytick.color          : 444444      # color of the tick labels
-ytick.labelsize      : medium # fontsize of the tick labels
+ytick.color          : 333333      # color of the tick labels
+ytick.labelsize      : large # fontsize of the tick labels
 ytick.direction      : in     # direction: in or out
 
 
@@ -284,8 +284,8 @@ figure.edgecolor : 0.50   # figure edgecolor
 
 # The figure subplot parameters.  All dimensions are fraction of the
 # figure width or height
-figure.subplot.left    : 0.08  # the left side of the subplots of the figure
-figure.subplot.bottom  : 0.1    # the bottom of the subplots of the figure
+figure.subplot.left    : 0.12  # the left side of the subplots of the figure
+figure.subplot.bottom  : 0.12    # the bottom of the subplots of the figure
 figure.subplot.right   : 0.97    # the right side of the subplots of the figure
 figure.subplot.top     : 0.90    # the top of the subplots of the figure
 figure.subplot.wspace  : 0.2    # the amount of width reserved for blank space between subplots
