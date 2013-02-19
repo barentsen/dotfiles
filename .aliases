@@ -12,11 +12,11 @@ alias ll='ls -lsha'
 # Science tools
 alias ipy="ipython --colors=LightBG"
 alias je="java -jar $HOME/bin/jEdit/5.0pre1/jedit.jar"
-alias aladin="java -Xmx6000m -jar $HOME/bin/aladin/Aladin.jar"
+alias aladin="nice java -Xmx6000m -jar $HOME/bin/aladin/Aladin.jar"
 alias astrometrica="wine ~/bin/astrometrica/Astrometrica.exe"
 
 # TopCat
-alias tc='java -Xmx4000m -classpath $HOME/bin/topcat-full.jar:$HOME/bin/postgresql.jdbc4.jar -Djdbc.drivers=org.postgresql.Driver uk.ac.starlink.topcat.Driver'
+alias tc='nice java -Xmx4000m -classpath $HOME/bin/topcat-full.jar:$HOME/bin/postgresql.jdbc4.jar -Djdbc.drivers=org.postgresql.Driver uk.ac.starlink.topcat.Driver'
 alias stilts="tc -stilts"
 alias csv2fits="stilts tcopy ifmt=csv ofmt=fits-plus $1 $2"
 
