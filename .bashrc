@@ -33,10 +33,11 @@ unset file
 # MACHINE-SPECIFIC
 ###################
 
+export PYTHONDIR="/home/gb/bin/epd" # Enthought Python Distribution
+
 # Options specific to Herts (using regex on $HOSTNAME)
 if [[ $HOSTNAME =~ .*herts.* ]]; then
 	# EPD Python installation
-	export PYTHONDIR="/home/gb/bin/epd-7.3-1-rh5-x86_64"
 	# Printers
     alias prnt='lpr -Plj3' # Print in black/white
     alias prntc='lpr -Pljc3' # Print in colour
