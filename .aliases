@@ -1,4 +1,5 @@
-JAVA="/home/gb/bin/java/bin/java"
+#JAVA="/home/gb/bin/java/bin/java"
+JAVA="java" # system java
 
 # Shorthands
 alias v="vim"
