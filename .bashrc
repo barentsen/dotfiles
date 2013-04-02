@@ -6,6 +6,7 @@
 
 # Detect the OS
 export OS=$(uname)
+export TERM='xterm-256color'
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.

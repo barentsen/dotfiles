@@ -8,9 +8,11 @@ set tabstop=8
 set expandtab
 set softtabstop=4
 set shiftwidth=4
-set background=light
 set number
 filetype indent plugin on
+
+set background=dark
+colorscheme solarized
 
 let g:pep8_map='<leader>8'
 

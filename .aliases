@@ -1,5 +1,5 @@
 #JAVA="/home/gb/bin/java/bin/java"
-JAVA="java" # system java
+JAVA="java -XX:+UseConcMarkSweepGC"  # system java
 
 # Shorthands
 alias v="vim"

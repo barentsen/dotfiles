@@ -1,22 +1,22 @@
-~/bin
-~/bin/bin
-~/bin/Montage_v3.3
-~/bin/Montage
-~/bin/pgsql/bin
-~/bin/p2pp/bin
-~/bin/wine-1.4.1/bin
-~/bin/cfitsio3310/bin
-~/bin/astrometry.net-0.38/bin
-~/bin/casutools/bin
-~/bin/Sublime\ Text\ 2
-~/bin/mongodb/bin
-~/.dropbox-dist
-~/bin/python/bin
-~/bin/mpi/bin
-~/bin/ffmpeg
-~/bin/mplayer/bin
+/home/gb/bin
+/home/gb/bin/bin
+/home/gb/bin/Montage_v3.3
+/home/gb/bin/Montage
+/home/gb/bin/pgsql/bin
+/home/gb/bin/p2pp/bin
+/home/gb/bin/wine-1.4.1/bin
+/home/gb/bin/cfitsio3310/bin
+/home/gb/bin/astrometry.net-0.38/bin
+/home/gb/bin/casutools/bin
+/home/gb/bin/Sublime\ Text\ 2
+/home/gb/bin/mongodb/bin
+/home/gb/.dropbox-dist
+/home/gb/bin/python/bin
+/home/gb/bin/mpi/bin
+/home/gb/bin/ffmpeg
+/home/gb/bin/mplayer/bin
 
-~/bin/src/wcstools-3.8.6/bin
+/home/gb/bin/src/wcstools-3.8.6/bin
 
 /Library/Frameworks/EPD64.framework/Versions/Current/bin
 /usr/local/Cellar/coreutils/8.17/libexec/gnubin
