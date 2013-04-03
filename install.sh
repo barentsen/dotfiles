@@ -8,7 +8,7 @@ if [ ! -r backup ]; then
 fi
 
 # Install dotfiles in the homedir
-for file in .{cshrc,tcshrc,profile,bashrc,bash_profile,bash_prompt,path,aliases,vimrc,apparix,extra}; do
+for file in .{tcshrc,bashrc,bash_profile,bash_prompt,path,aliases,apparix,extra}; do
 	if [ -r "$file" ]; then
 
 		# If a (non-symlink) file exists, backup and remove
@@ -23,3 +23,11 @@ for file in .{cshrc,tcshrc,profile,bashrc,bash_profile,bash_prompt,path,aliases,
 	fi
 done
 unset file
+
+# VIM
+if [ -r ~/.vim ]; then
+	echo "~/.vim already exists, not creating a symbolic link."
+else
+	ln -s ~/dev/dotfiles/vim ~/.vim
+	ln -s ~/dev/dotfiles/vim/vimrc ~/.vimrc
+fi
