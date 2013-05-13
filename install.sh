@@ -31,3 +31,10 @@ else
 	ln -s ~/dev/dotfiles/vim ~/.vim
 	ln -s ~/dev/dotfiles/vim/vimrc ~/.vimrc
 fi
+
+# Sublime Text
+if [ -r ~/.config/sublime-text-2/Packages/User ]; then
+	for file in Preferences SublimeLinter HTML; do
+		ln -s ~/dev/dotfiles/sublime/$file.sublime-settings ~/.config/sublime-text-2/Packages/User/$file.sublime-settings
+	done
+fi
