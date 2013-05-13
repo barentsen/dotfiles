@@ -1,0 +1,15 @@
+{
+    "tab_size": 4,
+    "translate_tabs_to_spaces": true,
+    "detect_indentation" : false,
+	"font_size": 10,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"wrap_width": 80
+}
+
+
+//"auto_wrap" : true, 
+//"wrap_style" : "classic"

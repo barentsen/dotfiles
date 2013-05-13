@@ -1,0 +1,8 @@
+{
+"sublimelinter_mark_style": "none",
+"sublimelinter_gutter_marks": true,
+"pep8_ignore":
+    [
+       "E123", "E201", "E202", "E501", "E126"
+    ]
+}
