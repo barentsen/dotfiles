@@ -44,9 +44,6 @@ set title     " show title of the file in vim title bar
 set ls=2      " show status bar with file path and name
 set showmode  " show the current mode of the editor
 
-set list
-set listchars=tab:>.,trail:.,extends:#,nbsp:.
-
 set background=dark
 colorscheme solarized
 
