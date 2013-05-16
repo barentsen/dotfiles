@@ -1,6 +1,10 @@
 #!/bin/bash
 # This script will install the configuration files into the relevant places
 
+# Make sure our dependencies are pulled in
+git submodule init
+git submodule update
+
 # Create a backup dir to copy the existing dotfiles into
 if [ ! -r backup ]; then
 	echo "Creating backup/ directory"
