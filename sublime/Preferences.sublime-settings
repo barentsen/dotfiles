@@ -1,6 +1,6 @@
 {
 	"detect_indentation": false,
-	"font_size": 12,
+	"font_size": 10,
 	"ignored_packages":
 	[
 		"Vintage"

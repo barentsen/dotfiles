@@ -26,15 +26,21 @@ unset file
 
 # VIM
 if [ -r ~/.vim ]; then
-	echo "~/.vim already exists, not creating a symbolic link."
+	echo "Skipped linking ~/.vim (target already exists)"
 else
-	ln -s ~/dev/dotfiles/vim ~/.vim
-	ln -s ~/dev/dotfiles/vim/vimrc ~/.vimrc
+	ln -s $PWD/vim ~/.vim
+	ln -s ~/.vim/vimrc ~/.vimrc
 fi
 
 # Sublime Text
-if [ -r ~/.config/sublime-text-2/Packages/User ]; then
-	for file in Preferences SublimeLinter HTML; do
-		ln -s ~/dev/dotfiles/sublime/$file.sublime-settings ~/.config/sublime-text-2/Packages/User/$file.sublime-settings
+STCONFIG="$HOME/.config/sublime-text-2/Packages/User"
+if [ -r $STCONFIG ]; then
+	for FILE in Preferences SublimeLinter HTML; do
+		TARGET="$STCONFIG/$FILE.sublime-settings"
+		if [ -r $TARGET ]; then
+			echo "Skipped linking $TARGET (target already exists)"
+		else
+			ln -s $PWD/sublime/$FILE.sublime-settings $TARGET
+		fi
 	done
 fi
