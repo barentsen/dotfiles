@@ -34,7 +34,8 @@ unset file
 # MACHINE-SPECIFIC
 ###################
 
-export PYTHONDIR="/home/gb/bin/epd" # Enthought Python Distribution
+#export PYTHONDIR="/home/gb/bin/epd" # Enthought Python Distribution
+export PYTHONDIR="/home/gb/bin/anaconda" # Enthought Python Distribution
 
 # Options specific to Herts (using regex on $HOSTNAME)
 if [[ $HOSTNAME =~ .*herts.* ]]; then

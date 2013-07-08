@@ -20,3 +20,5 @@
 
 /Library/Frameworks/EPD64.framework/Versions/Current/bin
 /usr/local/Cellar/coreutils/8.17/libexec/gnubin
+
+/home/gb/bin/anaconda/bin

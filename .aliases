@@ -14,7 +14,7 @@ alias grep='grep --color=auto'
 alias ll='ls -lsha'
 
 # Science tools
-alias ipy="ipython --colors=LightBG"
+alias ipy="ipython" # --colors=LightBG"
 alias je="$JAVA -jar $HOME/bin/jEdit/5.0pre1/jedit.jar"
 alias aladin="nice $JAVA -Xmx6000m -jar $HOME/bin/aladin/Aladin.jar"
 alias astrometrica="wine ~/bin/astrometrica/Astrometrica.exe"
