@@ -65,8 +65,8 @@ if [ ! -z "$PYTHONDIR" ]; then
 	export PATH="$PYTHONDIR/bin":$PATH
 	# Distribution packages dir
 	export PYTHONPATH="$PYTHONDIR/lib/python2.7/site-packages/:$HOME/bin/python/lib/python2.7/site-packages/"
-	# Packages being developed
-	export PYTHONPATH="$PYTHONPATH:$HOME/dev/pygaps:$HOME/dev/meteorpy:$HOME/dev/meteor-fluxviewer"
+	# My own packages
+	export PYTHONPATH="$PYTHONPATH:$HOME/dev/iphas-dr2:$HOME/dev/pygaps:$HOME/dev/meteorpy:$HOME/dev/meteor-fluxviewer"
 	export PYTHONHOME=$PYTHONDIR
 fi
 
