@@ -1,9 +1,8 @@
 set nocompatible
-
 execute pathogen#infect()
+
 syntax on
 filetype plugin indent on
-
 
 set tabstop=4       "A tab is four spaces
 set expandtab
@@ -20,13 +19,12 @@ set hlsearch      " highlight search terms
 set incsearch     " show search matches as you type
 
 set backspace=indent,eol,start
-                  " allow backspacing over everything in insert mode
-set autoindent    " always set autoindenting on
-set copyindent    " copy the previous indentation on autoindenting
+                    " allow backspacing over everything in insert mode
+set autoindent      " always set autoindenting on
+set copyindent      " copy the previous indentation on autoindenting
 
-set number         "Show line numbers
-
-set mouse=a    "Enable mouse
+set number          "Show line numbers
+set scrolloff=3     "More context around cursor
 
 set virtualedit=onemore    " allow cursor one line beyond last line
 set ttyfast            " smoother changes
@@ -44,12 +42,23 @@ set title     " show title of the file in vim title bar
 set ls=2      " show status bar with file path and name
 set showmode  " show the current mode of the editor
 
+"""
+"""AESTHETICS
+"""
 set background=dark
 colorscheme solarized
 
+"""
+"""KEYBOARD
+"""
+let mapleader = "," "Avoid pinky stretch
+
 let g:pep8_map='<leader>8'
 au FileType python set omnifunc=pythoncomplete#Complete
+
 let g:SuperTabDefaultCompletionType = "context"
 set completeopt=menuone,longest,preview
 
 map <leader>n :NERDTreeToggle<CR>
+
+set mouse=a         "Enable mouse

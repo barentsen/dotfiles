@@ -37,7 +37,7 @@ else
 fi
 
 # Sublime Text
-STCONFIG="$HOME/.config/sublime-text-2/Packages/User"
+STCONFIG="$HOME/.config/sublime-text-3/Packages/User"
 if [ -r $STCONFIG ]; then
 	for FILE in Preferences SublimeLinter HTML; do
 		TARGET="$STCONFIG/$FILE.sublime-settings"
