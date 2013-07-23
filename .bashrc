@@ -67,6 +67,10 @@ if [ ! -z "$PYTHONDIR" ]; then
 	export PYTHONPATH="$PYTHONDIR/lib/python2.7/site-packages/:$HOME/bin/python/lib/python2.7/site-packages/"
 	# My own packages
 	export PYTHONPATH="$PYTHONPATH:$HOME/dev/iphas-dr2:$HOME/dev/pygaps:$HOME/dev/meteorpy:$HOME/dev/meteor-fluxviewer"
+	# Setup virtualenvwrapper
+	source $PYTHONDIR/bin/virtualenvwrapper.sh
+	export WORKON_HOME=~/.venv
+
 	export PYTHONHOME=$PYTHONDIR
 fi
 

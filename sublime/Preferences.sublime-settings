@@ -1,12 +1,15 @@
 {
 	"detect_indentation": false,
-	"font_size": 12,
+	"font_size": 11,
 	"ignored_packages":
 	[
 		"Vintage"
 	],
+	"rulers":
+	[
+		80
+	],
 	"tab_size": 4,
 	"translate_tabs_to_spaces": true,
-	"wrap_width": 80,
-	"rulers": [80],
+	"wrap_width": 80
 }
