@@ -35,7 +35,7 @@ unset file
 ###################
 
 #export PYTHONDIR="/home/gb/bin/epd" # Enthought Python Distribution
-export PYTHONDIR="/home/gb/bin/anaconda" # Enthought Python Distribution
+export PYTHONDIR="/home/gb/bin/anaconda" 
 
 # Options specific to Herts (using regex on $HOSTNAME)
 if [[ $HOSTNAME =~ .*herts.* ]]; then
@@ -66,7 +66,7 @@ if [ ! -z "$PYTHONDIR" ]; then
 	# Distribution packages dir
 	export PYTHONPATH="$PYTHONDIR/lib/python2.7/site-packages/:$HOME/bin/python/lib/python2.7/site-packages/"
 	# My own packages
-	export PYTHONPATH="$PYTHONPATH:$HOME/dev/iphas-dr2:$HOME/dev/pygaps:$HOME/dev/meteorpy:$HOME/dev/meteor-fluxviewer"
+	export PYTHONPATH="$PYTHONPATH:$HOME/dev/iphas-dr2:$HOME/dev/pygaps:$HOME/dev/meteorpy:$HOME/dev/meteor-flux"
 	export PYTHONHOME=$PYTHONDIR
 fi
 
