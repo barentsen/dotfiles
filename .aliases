@@ -38,4 +38,5 @@ VLCPLAY="nohup vlc"
 alias stubru="$VLCPLAY http://mp3.streampower.be/stubru-high.mp3 2> /dev/null &"
 alias rad1="$VLCPLAY http://mp3.streampower.be/radio1-high.mp3 2> /dev/null &"
 alias radu="$VLCPLAY http://bbc.co.uk/radio/listen/live/ru.asx 2> /dev/null &"
+alias rad5="$VLCPLAY http://bbc.co.uk/radio/listen/live/r5l.asx 2> /dev/null &"
 

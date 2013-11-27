@@ -12,7 +12,7 @@ if [ ! -r backup ]; then
 fi
 
 # Install dotfiles in the homedir
-for file in .{tcshrc,bashrc,bash_profile,bash_prompt,path,aliases,apparix,extra}; do
+for file in .{tcshrc,bashrc,bash_profile,bash_prompt,path,aliases,apparix,tmux.conf,extra}; do
 	if [ -r "$file" ]; then
 
 		# If a (non-symlink) file exists, backup and remove
@@ -37,7 +37,7 @@ else
 fi
 
 # Sublime Text
-STCONFIG="$HOME/.config/sublime-text-2/Packages/User"
+STCONFIG="$HOME/.config/sublime-text-3/Packages/User"
 if [ -r $STCONFIG ]; then
 	for FILE in Preferences SublimeLinter HTML; do
 		TARGET="$STCONFIG/$FILE.sublime-settings"
