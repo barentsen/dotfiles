@@ -34,7 +34,6 @@ unset file
 # MACHINE-SPECIFIC
 ###################
 
-#export PYTHONDIR="/home/gb/bin/epd" # Enthought Python Distribution
 export PYTHONDIR="/home/gb/bin/anaconda" 
 
 # Options specific to Herts (using regex on $HOSTNAME)
