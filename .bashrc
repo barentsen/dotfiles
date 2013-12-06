@@ -100,3 +100,9 @@ shopt -s cdspell
 # update the values of LINES and COLUMNS
 shopt -s checkwinsize
 
+
+# Start ssh-agent
+if [ ! $SSH_AGENT_PID ]; then
+    eval `ssh-agent` > /dev/null
+fi;
+
