@@ -108,7 +108,7 @@ fi;
 
 
 # Welcome message
-CPU=`top -bn 1 | awk 'BEGIN{FS="[ \t%]+"} NR==3{ print 100-$9 }'`
+CPU=`top -bn 1 | cut -d'%' -f4 | awk 'BEGIN{FS="[ \t%]+"} NR==3{ print 100-$2 }'`
 LOAD=`uptime | awk -F, '{print $(NF)}'`
 DISK=`df -lh 2> /dev/null | awk '{if ($6 == "/") { print $5 }}' | head -n1`
 RAM=`free -m | grep Mem 2> /dev/null`
