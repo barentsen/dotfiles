@@ -110,7 +110,7 @@ fi;
 # Welcome message
 CPU=`top -bn 1 | awk 'BEGIN{FS="[ \t%]+"} NR==3{ print 100-$9 }'`
 LOAD=`uptime | awk -F, '{print $(NF)}'`
-DISK=`df -lh 2> /dev/null | awk '{if ($6 == "/") { print $5 }}'`
+DISK=`df -lh 2> /dev/null | awk '{if ($6 == "/") { print $5 }}' | head -n1`
 RAM=`free -m | grep Mem 2> /dev/null`
 RAMNOW=`echo $RAM | cut -f3 -d' '`
 RAMTOT=`echo $RAM | cut -f2 -d' '`
