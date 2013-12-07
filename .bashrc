@@ -108,10 +108,10 @@ fi;
 
 
 # Welcome message
-CPU=`top -bn 1 | awk 'BEGIN{FS="[ \t%]+"} NR==3{ print 100-$9 }'`
-LOAD=`uptime | cut -d"," -f6`
-DISK=`df -lh | awk '{if ($6 == "/") { print $5 }}'`
-RAM=`free -m | grep Mem` 
+CPU=`top -bn 1 | awk 'BEGIN{FS="[ \t%]+"} NR==3{ print 100-$9 }'` 2> /dev/null
+LOAD=`uptime | cut -d"," -f6` 2> /dev/null
+DISK=`df -lh | awk '{if ($6 == "/") { print $5 }}'` 2> /dev/null
+RAM=`free -m | grep Mem` 2> /dev/null
 RAMNOW=`echo $RAM | cut -f3 -d' '`
 RAMTOT=`echo $RAM | cut -f2 -d' '`
 echo cpu $CPU%, load $LOAD, mem $(echo "scale = 1; $RAMNOW/$RAMTOT*100" | bc)%, disk $DISK
