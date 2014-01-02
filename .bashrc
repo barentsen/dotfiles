@@ -34,11 +34,11 @@ unset file
 # MACHINE-SPECIFIC
 ###################
 
+# Where is the Anaconda Python distribution?
 export PYTHONDIR="/home/gb/bin/anaconda" 
 
-# Options specific to Herts (using regex on $HOSTNAME)
+# Options specific to Herts
 if [[ $HOSTNAME =~ .*herts.* ]]; then
-	# EPD Python installation
 	# Printers
     alias prnt='lpr -Plj3' # Print in black/white
     alias prntc='lpr -Pljc3' # Print in colour
@@ -47,8 +47,6 @@ if [[ $HOSTNAME =~ .*herts.* ]]; then
 fi
 
 if [[ $HOSTNAME =~ .*geertbook.* ]]; then
-	#export PYTHONHOME="/Library/Frameworks/EPD64.framework/Versions/7.3/lib/python2.7/site-packages/"
-	#export PYTHONPATH="$PYTHONHOME:$HOME/bin/python/lib/python2.7/site-packages:$HOME/proj/pygaps"
 	export PYTHONDIR="/Library/Frameworks/EPD64.framework/Versions/7.3"
 	export PYTHONDIR2="$HOME/bin/python"
 	#alias pip="pip --target $PYTHONDIR2/lib/python2.7/site-packages"
@@ -62,9 +60,7 @@ fi
 #########
 if [ ! -z "$PYTHONDIR" ]; then
 	export PATH="$PYTHONDIR/bin":$PATH
-	# Distribution packages dir
 	export PYTHONPATH="$PYTHONDIR/lib/python2.7/site-packages/:$HOME/bin/python/lib/python2.7/site-packages/"
-	# My own packages
 	export PYTHONPATH="$PYTHONPATH:$HOME/dev/iphas-dr2:$HOME/dev/pygaps:$HOME/dev/meteorpy:$HOME/dev/meteor-flux"
 	export PYTHONHOME=$PYTHONDIR
 fi
@@ -101,13 +97,14 @@ shopt -s cdspell
 shopt -s checkwinsize
 
 
-# Start ssh-agent
-if [ ! $SSH_AGENT_PID ]; then
-    eval `ssh-agent` > /dev/null
-fi;
-
-# Welcome message
+# More machine-specific
 if [[ $HOSTNAME =~ .*(uhppc|gvm|flux|ec2).* ]]; then
+    # Start ssh-agent
+    if [ ! $SSH_AGENT_PID ]; then
+        eval `ssh-agent` > /dev/null
+    fi;
+
+    # System status welcome message
     CPU=`top -bn 1 | cut -d',' -f4 | awk 'BEGIN{FS="[ \t%]+"} NR==3{ print 100-$2 }'`
     LOAD=`uptime | awk -F, '{print $(NF)}'`
     DISK=`df -lh 2> /dev/null | awk '{if ($6 == "/") { print $5 }}' | head -n1`
@@ -115,4 +112,5 @@ if [[ $HOSTNAME =~ .*(uhppc|gvm|flux|ec2).* ]]; then
     RAMNOW=`echo $RAM | cut -f3 -d' '`
     RAMTOT=`echo $RAM | cut -f2 -d' '`
     echo cpu $CPU%, load $LOAD, mem $(echo "scale = 1; $RAMNOW/$RAMTOT*100" | bc)%, disk $DISK
+
 fi
