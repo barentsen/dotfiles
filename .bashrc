@@ -40,7 +40,7 @@ export PYTHONDIR="/home/gb/bin/anaconda"
 # Options specific to Herts
 if [[ $HOSTNAME =~ .*herts.* ]]; then
 	# Printers
-    alias prnt='lpr -Plj3' # Print in black/white
+    alias prnt='lpr -Plj2' # Print in black/white
     alias prntc='lpr -Pljc3' # Print in colour
     # Others
     alias gaia='/soft/star-namaka-64bit/bin/gaia/gaia_standalone.csh'
