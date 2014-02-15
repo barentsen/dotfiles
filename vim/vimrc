@@ -4,6 +4,8 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+set colorcolumn=80
+
 set tabstop=4       "A tab is four spaces
 set expandtab
 set softtabstop=4
