@@ -51,7 +51,7 @@ colorscheme solarized
 """
 """KEYBOARD
 """
-let mapleader = "," "Avoid pinky stretch
+"""let mapleader = "," "Avoid pinky stretch
 
 let g:pep8_map='<leader>8'
 au FileType python set omnifunc=pythoncomplete#Complete
