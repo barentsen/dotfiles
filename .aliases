@@ -7,6 +7,7 @@ alias d="cd ~/dev"
 alias p="cd ~/proj"
 alias gp='git pull'
 alias gc='git commit --verbose -am '
+alias verynice='ionice -c3 nice -n19 '
 
 # System tools
 alias ls='ls --color=auto'
@@ -31,7 +32,6 @@ alias startmongo="mongod --port 4230 --dbpath $HOME/msc/mongodata --logpath $HOM
 # Mac: mongod run --config /usr/local/etc/mongod.conf
 alias mongo="mongo --port 4230"
 
-
 # Radio
 #VLCPLAY="nohup vlc --qt-start-minimized"
 VLCPLAY="nohup vlc"
@@ -39,4 +39,3 @@ alias stubru="$VLCPLAY http://mp3.streampower.be/stubru-high.mp3 2> /dev/null &"
 alias rad1="$VLCPLAY http://mp3.streampower.be/radio1-high.mp3 2> /dev/null &"
 alias radu="$VLCPLAY http://bbc.co.uk/radio/listen/live/ru.asx 2> /dev/null &"
 alias rad5="$VLCPLAY http://bbc.co.uk/radio/listen/live/r5l.asx 2> /dev/null &"
-
