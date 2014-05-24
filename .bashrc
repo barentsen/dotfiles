@@ -68,7 +68,9 @@ fi
 # SHELL OPTIONS
 ################
 
-# Enable insane vi powers
+# We prefer vim
+export EDITOR=vim
+# Enable insane vi powers in the shell
 set -o vi
 set editing-mode vi
 set keymap vi
@@ -112,5 +114,4 @@ if [[ $HOSTNAME =~ .*(uhppc|gvm|flux|ec2).* ]]; then
     RAMNOW=`echo $RAM | cut -f3 -d' '`
     RAMTOT=`echo $RAM | cut -f2 -d' '`
     echo cpu $CPU%, load $LOAD, mem $(echo "scale = 1; $RAMNOW/$RAMTOT*100" | bc)%, disk $DISK
-
 fi
