@@ -34,9 +34,6 @@ unset file
 # MACHINE-SPECIFIC
 ###################
 
-# Where is the Anaconda Python distribution?
-export PYTHONDIR="/home/gb/bin/anaconda" 
-
 # Options specific to Herts
 if [[ $HOSTNAME =~ .*herts.* ]]; then
 	# Printers
@@ -46,22 +43,16 @@ if [[ $HOSTNAME =~ .*herts.* ]]; then
     alias gaia='/soft/star-namaka-64bit/bin/gaia/gaia_standalone.csh'
 fi
 
-if [[ $HOSTNAME =~ .*geertbook.* ]]; then
-	export PYTHONDIR="/Library/Frameworks/EPD64.framework/Versions/7.3"
-	export PYTHONDIR2="$HOME/bin/python"
-	alias subl="/Applications/Sublime\ Text\ 2.app/Contents/MacOS/Sublime\ Text\ 2"
-fi
-
-
 #########
 # PYTHON
 #########
+# Where is our preferred Python distribution?
+export PYTHONDIR="/home/gb/bin/anaconda" 
 if [ ! -z "$PYTHONDIR" ]; then
 	export PATH="$PYTHONDIR/bin":$PATH
-	export PYTHONPATH="$PYTHONDIR/lib/python2.7/site-packages/:$HOME/bin/python/lib/python2.7/site-packages/"
-	export PYTHONPATH="$PYTHONPATH:$HOME/dev/iphas-dr2:$HOME/dev/pygaps:$HOME/dev/meteorpy:$HOME/dev/meteor-flux"
-	export PYTHONHOME=$PYTHONDIR
 fi
+# Default Python path entries
+export PYTHONPATH="$PYTHONPATH:$HOME/dev/iphas-dr2:$HOME/dev/meteor-flux"
 
 
 ################
