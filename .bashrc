@@ -53,6 +53,8 @@ if [ ! -z "$PYTHONDIR" ]; then
 fi
 # Default Python path entries
 export PYTHONPATH="$PYTHONPATH:$HOME/dev/iphas-dr2:$HOME/dev/meteor-flux"
+# Real developers enable warnings
+export PYTHONWARNINGS=d
 
 
 ################
