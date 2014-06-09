@@ -39,8 +39,13 @@ if [[ $HOSTNAME =~ .*herts.* ]]; then
 	# Printers
     alias prnt='lpr -Plj2' # Print in black/white
     alias prntc='lpr -Pljc3' # Print in colour
+fi
+
+if [[ $HOSTNAME =~ uhppc.* ]]; then
     # Others
     alias gaia='/soft/star-namaka-64bit/bin/gaia/gaia_standalone.csh'
+    # Local postgres installation
+    export PGPORT=5433
 fi
 
 #########
@@ -92,14 +97,16 @@ shopt -s cdspell
 shopt -s checkwinsize
 
 
-# More machine-specific
+##################
+# WELCOME MESSAGE
+##################
+
 if [[ $HOSTNAME =~ .*(uhppc|gvm|flux|ec2).* ]]; then
     # Start ssh-agent
     if [ ! $SSH_AGENT_PID ]; then
         eval `ssh-agent` > /dev/null
     fi;
 
-    # System status welcome message
     CPU=`top -bn 1 | cut -d',' -f4 | awk 'BEGIN{FS="[ \t%]+"} NR==3{ print 100-$2 }'`
     LOAD=`uptime | awk -F, '{print $(NF)}'`
     DISK=`df -lh 2> /dev/null | awk '{if ($6 == "/") { print $5 }}' | head -n1`

@@ -47,9 +47,9 @@ RESET="\033[m"
 
 
 # Let the color of the hostname depend on the machine!
-if [[ $HOSTNAME = 'uhppc11.herts.ac.uk' ]]; then
+if [[ $HOSTNAME =~ uhppc11.* ]]; then
     HOSTCOL=$WHITE_ON_GREEN
-elif [[ $HOSTNAME = 'stri-cluster.herts.ac.uk' ]]; then
+elif [[ $HOSTNAME =~ stri-cluster.* ]]; then
     HOSTCOL=$WHITE_ON_RED
 else
     HOSTCOL=$BLUE
