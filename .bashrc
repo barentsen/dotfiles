@@ -42,9 +42,9 @@ if [[ $HOSTNAME =~ .*herts.* ]]; then
 fi
 
 if [[ $HOSTNAME =~ uhppc.* ]]; then
-    # Others
     alias gaia='/soft/star-namaka-64bit/bin/gaia/gaia_standalone.csh'
     # Local postgres installation
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/gb/bin/pgsql/lib
     export PGPORT=5433
 fi
 
@@ -57,7 +57,7 @@ if [ ! -z "$PYTHONDIR" ]; then
 	export PATH="$PYTHONDIR/bin":$PATH
 fi
 # Default Python path entries
-export PYTHONPATH="$PYTHONPATH:$HOME/dev/iphas-dr2:$HOME/dev/meteor-flux"
+export PYTHONPATH="$HOME/dev/iphas-dr2:$HOME/dev/meteor-flux"
 # Real developers enable warnings
 export PYTHONWARNINGS=d
 
