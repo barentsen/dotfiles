@@ -8,6 +8,7 @@ alias p="cd ~/proj"
 alias gp='git pull'
 alias gc='git commit --verbose -am '
 alias verynice='ionice -c3 nice -n19 '
+alias geertsync='rsync -avzP '
 
 # System tools
 alias ls='ls --color=auto'
