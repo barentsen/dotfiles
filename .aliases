@@ -11,6 +11,9 @@ alias verynice='ionice -c3 nice -n19 '
 alias geertsync='rsync -avzP '
 alias wgeert='wget --tries=0 --read-timeout=5 --continue '
 
+# Impressive needs system python
+keynote='/usr/bin/python /usr/bin/impressive --nologo -T 200'
+
 # System tools
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
