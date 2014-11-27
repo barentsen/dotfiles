@@ -5,8 +5,10 @@ JAVA="java -XX:+UseConcMarkSweepGC"  # system java
 alias v="vim"
 alias d="cd ~/dev"
 alias p="cd ~/proj"
-alias gp='git pull'
+alias gp='git pull '
 alias gc='git commit --verbose -am '
+alias gss='git status --short '
+alias gds='git diff --staged '
 alias verynice='ionice -c3 nice -n19 '
 alias geertsync='rsync -avzP '
 
