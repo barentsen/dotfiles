@@ -16,7 +16,6 @@ for file in ~/.{bash_prompt,aliases,apparix,extra}; do
 done
 
 
-
 #########
 # $PATH
 #########
@@ -57,7 +56,7 @@ if [ ! -z "$PYTHONDIR" ]; then
 	export PATH="$PYTHONDIR/bin":$PATH
 fi
 # Default Python path entries
-export PYTHONPATH="$HOME/dev/iphas-dr2:$HOME/dev/meteor-flux"
+export PYTHONPATH="$HOME/dev/iphas-dr2:$HOME/dev/meteor-flux:$HOME/bin/astrometry/lib/python"
 # Real developers enable warnings
 export PYTHONWARNINGS=d
 
