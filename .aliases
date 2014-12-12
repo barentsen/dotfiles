@@ -50,3 +50,6 @@ alias stubru="$VLCPLAY http://mp3.streampower.be/stubru-high.mp3 2> /dev/null &"
 alias rad1="$VLCPLAY http://mp3.streampower.be/radio1-high.mp3 2> /dev/null &"
 alias radu="$VLCPLAY http://bbc.co.uk/radio/listen/live/ru.asx 2> /dev/null &"
 alias rad5="$VLCPLAY http://bbc.co.uk/radio/listen/live/r5l.asx 2> /dev/null &"
+
+# To get the dual monitor setup at uni working:
+alias screenfix="xrandr --output HDMI-1 --mode 1920x1200 --primary --left-of DVI-I-1 --output DVI-I-1 --mode 1680x1050"
