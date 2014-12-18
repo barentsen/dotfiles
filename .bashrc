@@ -29,9 +29,21 @@ done
 unset file
 
 
-###################
-# MACHINE-SPECIFIC
-###################
+#####################
+# ASTRONOMY SOFTWARE
+#####################
+export STARLINK_DIR='/home/gb/bin/starlink'
+
+IRAFSETUP=~/.iraf/setup.sh
+if [ -e $IRAFSETUP ]; then
+    source $IRAFSETUP
+fi
+alias iraf='ecl'
+
+
+########################
+# MACHINE-SPECIFIC BITS
+########################
 
 # Options specific to Herts
 if [[ $HOSTNAME =~ .*herts.* ]]; then
@@ -46,6 +58,7 @@ if [[ $HOSTNAME =~ uhppc.* ]]; then
     export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/gb/bin/pgsql/lib
     export PGPORT=5433
 fi
+
 
 #########
 # PYTHON
