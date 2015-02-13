@@ -38,7 +38,7 @@ IRAFSETUP=~/.iraf/setup.sh
 if [ -e $IRAFSETUP ]; then
     source $IRAFSETUP
 fi
-alias iraf='ecl'
+#alias iraf='ecl'
 
 
 ########################
@@ -57,6 +57,7 @@ if [[ $HOSTNAME =~ uhppc.* ]]; then
     # Local postgres installation
     export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/gb/bin/pgsql/lib
     export PGPORT=5433
+    export JAVA_HOME=/home/gb/bin/java
 fi
 
 
