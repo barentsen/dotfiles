@@ -64,14 +64,10 @@ fi
 #########
 # PYTHON
 #########
-# Where is our preferred Python distribution?
-export PYTHONDIR="/home/gb/bin/anaconda" 
-if [ ! -z "$PYTHONDIR" ]; then
-	export PATH="$PYTHONDIR/bin":$PATH
-fi
-# Default Python path entries
+# Python path entries.  Note that the python executable in $PATH will take care
+# of adding al the environment libs, we only need to add special ones here.
 export PYTHONPATH="$HOME/dev/iphas-dr2:$HOME/dev/meteor-flux:$HOME/bin/astrometry/lib/python"
-# Real developers enable warnings
+# Kick-ass developers enable all warnings!
 export PYTHONWARNINGS=d
 
 

@@ -1,7 +1,9 @@
 /home/gb/bin
 /home/gb/bin/bin
 /home/gb/bin/bin/bin
-/home/gb/bin/anaconda/bin
+
+/home/gb/bin/anaconda/envs/p3/bin
+
 /home/gb/bin/Montage_v3.3
 /home/gb/bin/Montage
 /home/gb/bin/pgsql/bin
@@ -21,11 +23,8 @@
 /home/gb/bin/node/bin
 /home/gb/bin/tidy-html5/bin
 /home/gb/bin/heroku/bin
-
 /home/gb/bin/src/wcstools-3.8.6/bin
 
-/Library/Frameworks/EPD64.framework/Versions/Current/bin
 /usr/local/Cellar/coreutils/8.17/libexec/gnubin
 
 /usr/local/maui/bin/
-
