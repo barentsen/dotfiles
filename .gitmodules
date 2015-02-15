@@ -19,3 +19,6 @@
 [submodule "vim/bundle/pyflakes-pathogen"]
 	path = vim/bundle/pyflakes-pathogen
 	url = https://github.com/mitechie/pyflakes-pathogen.git
+[submodule "powerline/fonts"]
+	path = powerline/fonts
+	url = https://github.com/powerline/fonts
