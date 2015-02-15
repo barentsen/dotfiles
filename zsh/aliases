@@ -2,16 +2,31 @@
 JAVA="java -XX:+UseConcMarkSweepGC"  # system java
 
 # Shorthands
+alias c="clear"
+alias q="exit"
 alias v="vim"
 alias d="cd ~/dev"
 alias p="cd ~/proj"
-alias gp='git pull '
-alias gc='git commit --verbose -am '
-alias gss='git status --short '
-alias gds='git diff --staged '
 alias verynice='ionice -c3 nice -n19 '
 alias geertsync='rsync -avzP '
 alias wgeert='wget --tries=0 --read-timeout=5 --continue '
+
+# Git
+alias ga='git add '
+alias gp='git pull '
+alias gs='git status '
+alias gc='git commit '
+alias gd='git diff '
+alias gac='git add --all && git commit -m'
+alias gss='git status --short '
+alias gds='git diff --staged '
+
+# Tmux
+alias t='tmux'
+alias tn='tmux new-session -s'
+alias ta='tmux attach-session -t'
+alias tl='tmux list-session'
+alias tk='tmux kill-server'
 
 # Impressive needs system python
 alias keynote='/usr/bin/python /usr/bin/impressive --nologo -T 200'
