@@ -1,2 +1,0 @@
-# This does nothing more than changing the default shell
-#/bin/bash  # Commented this because it broke sftp/scp!
