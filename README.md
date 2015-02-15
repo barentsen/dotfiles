@@ -3,9 +3,8 @@
 ***Configures `zsh`, `vim` and `tmux` to Geert's liking.***
 
 This repository holds my configuration files, which have been
-heavily inspired by looking at other people's `dotfiles` repositories.
-In fact some of the sub-directories are submodules referring to
-other repositories.
+heavily inspired by looking at other people's `dotfiles` repositories
+across GitHub.
 
 ## Installation
 To link the various configuration files into your home-directory,
@@ -13,14 +12,13 @@ type
 ```
 make all
 ```
-*Warning:* this will overwrite any existing configuration
-files you may hold in your home directory without
-asking for permission  
-(including `~/.zshrc`, `~/.zshenv`, `~/.tmux.conf`,
-`~/.vimrc`, `~/.vim`, etc).
+**Warning:** this will overwrite existing configuration
+files in your home directory without asking for permission,
+including e.g. `~/.zshrc`, `~/.zshenv`, `~/.tmux.conf`,
+`~/.vimrc`, and `~/.vim`.  Proceed with caution.
 
 ## License
 These files are made available under the MIT License.
-Parts of this repository have originated from other MIT-licensed
-repositories; consult the README files in the subdirectories
-to find out more.
+Parts of this repository have originated from other liberally-licensed
+repositories, some of which are linked as submodules. 
+See the README files in the subdirectories for details.
