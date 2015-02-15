@@ -13,23 +13,26 @@ source "${HOME}/.zgen.zsh"
 # check if there's no init script
 if ! zgen saved; then
     echo "Creating a zgen save"
-
     zgen oh-my-zsh
-
     # Plugins
     zgen oh-my-zsh plugins/command-not-found
     zgen oh-my-zsh plugins/tmux
-
     zgen load zsh-users/zsh-syntax-highlighting
     zgen load zsh-users/zsh-completions
     zgen load zsh-users/zsh-history-substring-search
-
     # Note that the agnoster theme requires a powerline font!
     zgen oh-my-zsh themes/agnoster
-
     # save all to init script
     zgen save
 fi
+
+##################
+# ALIASES & LOCALS
+##################
+# Load the contents of .zsh_aliases and .zsh_local
+for file in ~/.zsh_{aliases,local}; do
+    [ -r "$file" ] && source "$file"
+done
 
 #####################
 # ASTRONOMY SOFTWARE

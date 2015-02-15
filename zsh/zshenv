@@ -17,13 +17,3 @@ for file in ~/.zsh_{path,path_local}; do
     [ -r "$file" ] && export PATH=`colonise $file`:$PATH
 done
 unset file
-
-##################
-# ALIASES & LOCALS
-##################
-# Load the contents of .zsh_aliases and .zsh_local
-for file in ~/.zsh_{aliases,local}; do
-    [ -r "$file" ] && source "$file"
-done
-
-
