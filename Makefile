@@ -8,9 +8,11 @@ install-tmux:
 
 install-zsh:
 	# Note that zsh won't be fully installed until it is run for the first time
-	ln -sf "$(PWD)/zsh/zshrc" ~/.zshrc
+	ln -sf "$(PWD)/path" ~/.zsh_path
+	ln -sf "$(PWD)/aliases" ~/.zsh_aliases
 	ln -sf "$(PWD)/zsh/zgen.zsh" ~/.zgen.zsh
 	ln -sf "$(PWD)/zsh/zshenv" ~/.zshenv
+	ln -sf "$(PWD)/zsh/zshrc" ~/.zshrc
 
 install-powerline:
 	pip install powerline-status
