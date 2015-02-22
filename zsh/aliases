@@ -47,7 +47,7 @@ alias serve="python -m SimpleHTTPServer"
 alias ssi="python ~/bin/ssi-server/ssi_server.py"
 
 # TopCat
-alias tc='nice $JAVA -Xmx4000m -classpath $HOME/bin/topcat-full.jar:$HOME/bin/postgresql.jdbc4.jar -Djdbc.drivers=org.postgresql.Driver uk.ac.starlink.topcat.Driver'
+alias tc="nice $JAVA -Xmx4000m -classpath $HOME/bin/topcat-full.jar:$HOME/bin/postgresql.jdbc4.jar -Djdbc.drivers=org.postgresql.Driver uk.ac.starlink.topcat.Driver"
 alias stilts="tc -stilts"
 alias csv2fits="stilts tcopy ifmt=csv ofmt=fits-plus $1 $2"
 

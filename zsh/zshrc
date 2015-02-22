@@ -2,8 +2,8 @@
 # and only if the shell is interactive.
 
 # export TERM='xterm-256color'  # this breaks tmux window names
-export ZSH_TMUX_AUTOSTART=true
-export ZSH_TMUX_AUTOCONNECT=false  # start a new session each time
+#export ZSH_TMUX_AUTOSTART=true
+#export ZSH_TMUX_AUTOCONNECT=false  # start a new session each time
 
 ############
 # SETUP ZGEN
@@ -17,6 +17,7 @@ if ! zgen saved; then
     # Plugins
     zgen oh-my-zsh plugins/command-not-found
     zgen oh-my-zsh plugins/tmux
+    zgen oh-my-zsh plugins/ssh-agent
     zgen load zsh-users/zsh-syntax-highlighting
     zgen load zsh-users/zsh-completions
     zgen load zsh-users/zsh-history-substring-search
@@ -81,11 +82,6 @@ export LS_COLORS='rs=0:di=00;34:ln=00;36:mh=00:pi=40;33:so=00;35:do=00;35:bd=40;
 ##################
 
 if [[ $HOST =~ .*(uhppc|gvm|flux|ec2|xps).* ]]; then
-    # Start ssh-agent
-    if [ ! $SSH_AGENT_PID ]; then
-        eval `ssh-agent` > /dev/null
-    fi;
-
     CPU=`top -bn 1 | cut -d',' -f4 | awk 'BEGIN{FS="[ \t%]+"} NR==3{ print 100-$2 }'`
     LOAD=`uptime | awk -F', ' '{print $(NF)}'`
     DISK=`df -lh 2> /dev/null | awk '{if ($6 == "/") { print $5 }}' | head -n1`
