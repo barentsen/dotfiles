@@ -2,7 +2,7 @@
 JAVA="java -XX:+UseConcMarkSweepGC"  # system java
 
 # Shorthands
-alias c="clear"
+alias c="cd"
 alias q="exit"
 alias v="vim"
 alias d="cd ~/dev"
