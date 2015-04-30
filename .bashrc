@@ -68,7 +68,7 @@ fi
 # of adding al the environment libs, we only need to add special ones here.
 export PYTHONPATH="$HOME/dev/iphas-dr2:$HOME/dev/meteor-flux:$HOME/bin/astrometry/lib/python"
 # Kick-ass developers enable warnings and explicitely ignore annoying ones
-export PYTHONWARNINGS="d, ignore:::imp, ignore:unclosed file <_io.TextIO"
+export PYTHONWARNINGS="d, ignore:::imp, ignore:unclosed"
 
 
 ################
