@@ -47,8 +47,10 @@ set showmode  " show the current mode of the editor
 """
 """AESTHETICS
 """
+set t_Co=256
 set background=dark
 colorscheme solarized
+
 
 """
 """KEYBOARD
