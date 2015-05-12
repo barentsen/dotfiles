@@ -9,6 +9,7 @@ alias d="cd ~/dev"
 alias p="cd ~/proj"
 alias verynice='ionice -c3 nice -n19 '
 alias geertsync='rsync -avzP '
+alias ggrep='grep -iHn'
 alias wgeert='wget --tries=0 --read-timeout=5 --continue '
 
 # Git
@@ -35,6 +36,10 @@ alias keynote='/usr/bin/python /usr/bin/impressive --nologo -T 200'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias ll='ls -lsha'
+# List information on the drives
+alias lsfs='lsblk'
+# Which services are running?
+alias geertnetstat='sudo netstat -tulpn'
 
 # Science tools
 alias ipy="ipython" # --colors=LightBG"
