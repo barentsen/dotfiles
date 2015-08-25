@@ -42,17 +42,20 @@ alias lsfs='lsblk'
 alias geertnetstat='sudo netstat -tulpn'
 
 # Science tools
-alias ipy="ipython" # --colors=LightBG"
+alias ipy="ipython"
 alias je="$JAVA -jar $HOME/bin/jEdit/5.0pre1/jedit.jar"
-alias aladin="nice $JAVA -Xmx6000m -jar $HOME/bin/aladin/Aladin.jar"
+alias aladin="nice $JAVA -Xmx2000m -jar $HOME/bin/aladin/Aladin.jar"
 alias astrometrica="wine ~/bin/astrometrica/Astrometrica.exe"
 
 # Python shortcuts
 alias serve="python -m SimpleHTTPServer"
 alias ssi="python ~/bin/ssi-server/ssi_server.py"
 
+# Astropy shortcuts
+alias ifits="ipython -i -c 'from astropy.io import fits'"
+
 # TopCat
-alias tc="nice $JAVA -Xmx4000m -classpath $HOME/bin/topcat-full.jar:$HOME/bin/postgresql.jdbc4.jar -Djdbc.drivers=org.postgresql.Driver uk.ac.starlink.topcat.Driver"
+alias tc="nice $JAVA -Xmx2000m -classpath $HOME/bin/topcat-full.jar:$HOME/bin/postgresql.jdbc4.jar -Djdbc.drivers=org.postgresql.Driver uk.ac.starlink.topcat.Driver"
 alias stilts="tc -stilts"
 alias csv2fits="stilts tcopy ifmt=csv ofmt=fits-plus $1 $2"
 
