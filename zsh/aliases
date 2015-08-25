@@ -1,10 +1,3 @@
-# Combine mkdir and cd into `mkcd`
-mkcd ()
-{
-    mkdir -p -- "$1" &&
-      cd -P -- "$1"
-}
-
 # Java
 JAVA="java -XX:+UseConcMarkSweepGC"  # system java
 
@@ -58,9 +51,6 @@ alias astrometrica="wine ~/bin/astrometrica/Astrometrica.exe"
 alias serve="python -m SimpleHTTPServer"
 alias ssi="python ~/bin/ssi-server/ssi_server.py"
 
-# Astropy shortcuts
-alias ifits="ipython -i -c 'from astropy.io import fits'"
-
 # TopCat
 alias tc="nice $JAVA -Xmx2000m -classpath $HOME/bin/topcat-full.jar:$HOME/bin/postgresql.jdbc4.jar -Djdbc.drivers=org.postgresql.Driver uk.ac.starlink.topcat.Driver"
 alias stilts="tc -stilts"
@@ -83,3 +73,21 @@ alias rad5="$VLCPLAY http://bbc.co.uk/radio/listen/live/r5l.asx 2> /dev/null &"
 
 # To get the dual monitor setup at uni working:
 alias screenfix="xrandr --output HDMI-1 --mode 1920x1200 --primary --left-of DVI-I-1 --output DVI-I-1 --mode 1680x1050"
+
+
+###################
+# Custom functions
+###################
+
+# Combine mkdir and cd into `mkcd`
+mkcd()
+{
+    mkdir -p -- "$1" &&
+      cd -P -- "$1"
+}
+
+# Inspect a FITS object quickly using `ifi`
+ifi()
+{
+    ipython -i -c "from astropy.io import fits; print(\"\\nFor your convenience, ipython ran:\\nf = fits.open($1)\"); f = fits.open(\"$1\")"
+}
