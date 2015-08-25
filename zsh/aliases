@@ -1,4 +1,11 @@
-#JAVA="/home/gb/bin/java/bin/java"
+# Combine mkdir and cd into `mkcd`
+mkcd ()
+{
+    mkdir -p -- "$1" &&
+      cd -P -- "$1"
+}
+
+# Java
 JAVA="java -XX:+UseConcMarkSweepGC"  # system java
 
 # Shorthands
