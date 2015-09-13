@@ -6,7 +6,8 @@
 
 PWD=$(shell pwd)
 
-install: install-tmux install-zsh \
+install: submodules \
+	     install-tmux install-zsh \
          install-powerline install-vim
 
 submodules: update-submodules install-fonts
