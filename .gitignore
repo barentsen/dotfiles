@@ -7,6 +7,6 @@ dotfiles.sublime-workspace
 
 .netrwhist
 
-*.swp  # Vim makes these
+*.swp
 
 TODO
