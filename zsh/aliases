@@ -13,6 +13,7 @@ alias ggrep="grep -iHn "
 alias wgeert="wget --tries=0 --read-timeout=5 --continue "
 alias ag="sudo apt-get "
 alias ac="sudo apt-cache "
+alias p2="source activate p2"
 
 # Git
 alias ga='git add '
@@ -36,8 +37,9 @@ alias keynote='/usr/bin/python /usr/bin/impressive --nologo -T 200'
 
 # System tools
 alias ls='ls --color=auto'
+alias l='ls -lha --color=auto'
+alias ll='ls -lha --color=auto'
 alias grep='grep --color=auto'
-alias ll='ls -lsha'
 # List information on the drives
 alias lsfs='lsblk'
 # Which services are running?
