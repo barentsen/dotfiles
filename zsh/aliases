@@ -58,7 +58,6 @@ alias ssi="python ~/bin/ssi-server/ssi_server.py"
 # TopCat
 alias tc="nice $JAVA -Xmx2000m -classpath $HOME/bin/topcat-full.jar:$HOME/bin/postgresql.jdbc4.jar -Djdbc.drivers=org.postgresql.Driver uk.ac.starlink.topcat.Driver"
 alias stilts="tc -stilts"
-alias csv2fits="stilts tcopy ifmt=csv ofmt=fits-plus $1 $2"
 
 # Databases
 alias startdb="pg_ctl -D $HOME/msc/pgdata -l $HOME/tmp/pg.log start"
@@ -79,9 +78,10 @@ alias rad5="$VLCPLAY http://bbc.co.uk/radio/listen/live/r5l.asx 2> /dev/null &"
 alias screenfix="xrandr --output HDMI-1 --mode 1920x1200 --primary --left-of DVI-I-1 --output DVI-I-1 --mode 1680x1050"
 
 
-###################
-# Custom functions
-###################
+#######################
+# Convenience functions
+#######################
+# (because aliases don't support $1, $2, etc)
 
 # Combine mkdir and cd into `mkcd`
 mkcd()
@@ -94,4 +94,25 @@ mkcd()
 ifi()
 {
     ipython -i -c "from astropy.io import fits; print(\"\\nFor your convenience, ipython ran:\\nf = fits.open($1)\"); f = fits.open(\"$1\")"
+}
+
+# `pipe2csv` converts pipe- to comma-delimited csv files
+function pipe2csv() {
+    OUTPUT="$1.csv"
+    echo "Writing $OUTPUT"
+    csvformat --delimiter \| --out-delimiter , $1 > $OUTPUT
+}
+
+# `csv2pipe` converts comma- to pipe-delimited csv files
+function csv2pipe() {
+    OUTPUT="$1.pipe"
+    echo "Writing $OUTPUT"
+    csvformat --delimiter , --out-delimiter \| $1 > $OUTPUT
+}
+
+# `csv2fits` converts csv files into fits format using stilts
+function csv2fits() {
+    OUTPUT="$1.fits"
+    echo "Writing $OUTPUT"
+    stilts tcopy ifmt=csv ofmt=fits-plus $1 $OUTPUT
 }
