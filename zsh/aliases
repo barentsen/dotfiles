@@ -52,7 +52,7 @@ alias aladin="nice $JAVA -Xmx2000m -jar $HOME/bin/aladin/Aladin.jar"
 alias astrometrica="wine ~/bin/astrometrica/Astrometrica.exe"
 
 # Python shortcuts
-alias serve="python -m SimpleHTTPServer"
+alias serve="python -m http.server"
 alias ssi="python ~/bin/ssi-server/ssi_server.py"
 
 # TopCat
