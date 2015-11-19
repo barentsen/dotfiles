@@ -1,8 +1,14 @@
 # Java
 JAVA="java -XX:+UseConcMarkSweepGC"  # system java
 
-# Shorthands
+# Changing directory shorthands
 alias c="cd"
+alias cd..="cd .."
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+
+# More shorthands
 alias q="exit"
 alias v="vim"
 alias d="cd ~/dev"
