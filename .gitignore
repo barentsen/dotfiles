@@ -1,5 +1,5 @@
 backup
-local
+local*
 .extra
 
 dotfiles.sublime-project
