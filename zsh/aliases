@@ -123,3 +123,10 @@ function csv2fits() {
     echo "Writing $OUTPUT"
     stilts tcopy ifmt=csv ofmt=fits-plus $1 $OUTPUT
 }
+
+# `vot2csv` converts VOTable files into csv format using stilts
+function vot2csv() {
+    OUTPUT="$1.csv"
+    echo "Writing $OUTPUT"
+    stilts tcopy ifmt=votable ofmt=csv $1 $OUTPUT
+}
