@@ -1,16 +1,28 @@
 # Java
 JAVA="java -XX:+UseConcMarkSweepGC"  # system java
 
-# Shorthands
+# Changing directory shorthands
 alias c="cd"
+alias cd..="cd .."
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+
+# More shorthands
 alias q="exit"
 alias v="vim"
 alias d="cd ~/dev"
 alias p="cd ~/proj"
-alias verynice='ionice -c3 nice -n19 '
-alias geertsync='rsync -avzP '
-alias ggrep='grep -iHn'
+alias verynice="ionice -c3 nice -n19 "
+
+alias geertsync="rsync -avzP "
 alias wgeert='wget --tries=0 --read-timeout=8 --continue -e robots=off --no-parent '
+
+alias ggrep="grep -iHn "
+alias pss="ps auxwf"
+alias ag="sudo apt-get "
+alias ac="sudo apt-cache "
+alias p2="source activate p2"
 
 # Git
 alias ga='git add '
@@ -34,8 +46,9 @@ alias keynote='/usr/bin/python /usr/bin/impressive --nologo -T 200'
 
 # System tools
 alias ls='ls --color=auto'
+alias l='ls -lha --color=auto'
+alias ll='ls -lha --color=auto'
 alias grep='grep --color=auto'
-alias ll='ls -lsha'
 # List information on the drives
 alias lsfs='lsblk'
 # Which services are running?
@@ -48,13 +61,12 @@ alias aladin="nice $JAVA -Xmx2000m -jar $HOME/bin/aladin/Aladin.jar"
 alias astrometrica="wine ~/bin/astrometrica/Astrometrica.exe"
 
 # Python shortcuts
-alias serve="python -m SimpleHTTPServer"
+alias serve="python -m http.server"
 alias ssi="python ~/bin/ssi-server/ssi_server.py"
 
 # TopCat
 alias tc="nice $JAVA -Xmx2000m -classpath $HOME/bin/topcat-full.jar:$HOME/bin/postgresql.jdbc4.jar -Djdbc.drivers=org.postgresql.Driver uk.ac.starlink.topcat.Driver"
 alias stilts="tc -stilts"
-alias csv2fits="stilts tcopy ifmt=csv ofmt=fits-plus $1 $2"
 
 # Databases
 alias startdb="pg_ctl -D $HOME/msc/pgdata -l $HOME/tmp/pg.log start"
@@ -75,9 +87,10 @@ alias rad5="$VLCPLAY http://bbc.co.uk/radio/listen/live/r5l.asx 2> /dev/null &"
 alias screenfix="xrandr --output HDMI-1 --mode 1920x1200 --primary --left-of DVI-I-1 --output DVI-I-1 --mode 1680x1050"
 
 
-###################
-# Custom functions
-###################
+#######################
+# Convenience functions
+#######################
+# (because aliases don't support $1, $2, etc)
 
 # Combine mkdir and cd into `mkcd`
 mkcd()
@@ -90,4 +103,32 @@ mkcd()
 ifi()
 {
     ipython -i -c "from astropy.io import fits; print(\"\\nFor your convenience, ipython ran:\\nf = fits.open($1)\"); f = fits.open(\"$1\")"
+}
+
+# `pipe2csv` converts pipe- to comma-delimited csv files
+function pipe2csv() {
+    OUTPUT="$1.csv"
+    echo "Writing $OUTPUT"
+    csvformat --delimiter \| --out-delimiter , $1 > $OUTPUT
+}
+
+# `csv2pipe` converts comma- to pipe-delimited csv files
+function csv2pipe() {
+    OUTPUT="$1.pipe"
+    echo "Writing $OUTPUT"
+    csvformat --delimiter , --out-delimiter \| $1 > $OUTPUT
+}
+
+# `csv2fits` converts csv files into fits format using stilts
+function csv2fits() {
+    OUTPUT="$1.fits"
+    echo "Writing $OUTPUT"
+    stilts tcopy ifmt=csv ofmt=fits-plus $1 $OUTPUT
+}
+
+# `vot2csv` converts VOTable files into csv format using stilts
+function vot2csv() {
+    OUTPUT="$1.csv"
+    echo "Writing $OUTPUT"
+    stilts tcopy ifmt=votable ofmt=csv $1 $OUTPUT
 }

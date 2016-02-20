@@ -1,10 +1,12 @@
 backup
-local
+local*
 .extra
 
 dotfiles.sublime-project
 dotfiles.sublime-workspace
 
 .netrwhist
+
+*.swp
 
 TODO

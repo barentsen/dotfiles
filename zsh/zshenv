@@ -4,7 +4,7 @@
 export OS=$(uname)
 
 # Kick-ass developers enable warnings and explicitely ignore annoying ones
-export PYTHONWARNINGS="d, ignore:::imp, ignore:unclosed"
+export PYTHONWARNINGS="d, ignore:::imp, ignore:unclosed, ignore::DeprecationWarning"
 
 #################
 # POPULATE $PATH
