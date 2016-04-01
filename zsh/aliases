@@ -22,13 +22,21 @@ alias ag="sudo apt-get "
 alias ac="sudo apt-cache "
 alias p2="source activate p2"
 
+# Scientific calculator
+alias calc="ipython -i -c 'import numpy as np; import astropy.units as u; import astropy.constants as c'"
+
+# Social functions
+alias geertspeak="espeak -v mb-en1 -s 100 "
+alias fire="geertspeak 'You are fired!'"
+alias converse="geertspeak 'Hello!'; read; geertspeak 'I am great!' read; geertspeak 'Are you enjoying the weather?'; read; geertspeak 'Oh I know! It was the same yesterday!'; read; geertspeak 'Oh I see.'; read; geertspeak 'Sounds good to me!'; read; geertspeak 'Ok, see you soon!'"
+
+
 # Git
 alias ga='git add '
 alias gp='git pull '
 alias gs='git status '
 alias gc='git commit -m '
 alias gd='git diff '
-alias gac='git add --all && git commit -m'
 alias gss='git status --short '
 alias gds='git diff --staged '
 
