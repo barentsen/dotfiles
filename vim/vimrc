@@ -1,8 +1,8 @@
 set nocompatible
 execute pathogen#infect()
 
-syntax on
 filetype plugin indent on
+syntax on
 
 set colorcolumn=80
 

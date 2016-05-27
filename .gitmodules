@@ -22,3 +22,6 @@
 [submodule "powerline/fonts"]
 	path = powerline/fonts
 	url = https://github.com/powerline/fonts
+[submodule "vim/bundle/csv"]
+	path = vim/bundle/csv
+	url = https://github.com/chrisbra/csv.vim
