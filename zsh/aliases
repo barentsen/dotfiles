@@ -113,6 +113,14 @@ ifi()
     ipython -i -c "from astropy.io import fits; print(\"\\nFor your convenience, ipython ran:\\nf = fits.open($1)\"); f = fits.open(\"$1\")"
 }
 
+# Extract an extension from a multi-extension FITS file
+fitsgrab()
+{
+    OUTPUT=`basename $1`"-$2.fits"
+    echo "Writing $OUTPUT"
+    python -c "from astropy.io import fits; fits.open('$1')[$2].writeto('$OUTPUT', clobber=True)"
+}
+
 # `pipe2csv` converts pipe- to comma-delimited csv files
 function pipe2csv() {
     OUTPUT="$1.csv"
