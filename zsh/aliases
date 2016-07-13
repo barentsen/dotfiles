@@ -20,8 +20,7 @@ alias wgeert='wget --tries=0 --read-timeout=8 --continue -e robots=off --no-pare
 
 alias ggrep="grep -iHn "
 alias pss="ps auxwf"
-alias ag="sudo apt-get "
-alias ac="sudo apt-cache "
+alias apt="sudo apt "
 alias p2="source activate p2"
 
 # Scientific calculator
