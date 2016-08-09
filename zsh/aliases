@@ -24,7 +24,7 @@ alias apt="sudo apt "
 alias p2="source activate p2"
 
 # Scientific calculator
-alias calc="ipython -i -c 'import numpy as np; import astropy.units as u; import astropy.constants as c'"
+alias calc="ipython -i -c 'import numpy as np; import pandas as pd; import astropy.units as u; import astropy.constants as c'"
 
 # Social functions
 alias geertspeak="espeak -v mb-en1 -s 100 "
@@ -110,6 +110,12 @@ mkcd()
 ifi()
 {
     ipython -i -c "from astropy.io import fits; print(\"\\nFor your convenience, ipython ran:\\nf = fits.open($1)\"); f = fits.open(\"$1\")"
+}
+
+# Print the percentiles of a fits extension
+fitshist()
+{
+    python -c "from astropy.io import fits; import numpy as np; f = fits.open(\"$1\"); print(np.percentile(f[$2].data[f[$2].data > -1], [0, 1, 25, 50, 75, 99, 100]))"
 }
 
 # Extract an extension from a multi-extension FITS file
