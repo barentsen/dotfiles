@@ -1,6 +1,8 @@
 # ~/.zshrc is sourced after ~/.zshenv,
 # and only if the shell is interactive.
 
+export UPDATE_ZSH_DAYS=180  # Let's not update all the time please
+
 # export TERM='xterm-256color'  # this breaks tmux window names
 #export ZSH_TMUX_AUTOSTART=true
 #export ZSH_TMUX_AUTOCONNECT=false  # start a new session each time
