@@ -106,6 +106,12 @@ mkcd()
       cd -P -- "$1"
 }
 
+# Extract a single line from a file
+getline()
+{
+    sed "$2q;d" $1
+}
+
 # Inspect a FITS object quickly using `ifi`
 ifi()
 {
