@@ -60,6 +60,8 @@ alias grep='grep --color=auto'
 alias lsfs='lsblk'
 # Which services are running?
 alias geertnetstat='sudo netstat -tulpn'
+# Show a nicer version of top with 0.5s refresh
+alias ht='htop -d 0.5'
 
 # Science tools
 alias ipy="ipython"
