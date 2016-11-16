@@ -26,6 +26,11 @@ alias p2="source activate p2"
 # Scientific calculator
 alias calc="ipython -i -c 'import numpy as np; import pandas as pd; import astropy.units as u; import astropy.constants as c'"
 
+# Turn Python warning on/off
+alias pywarnings_ignore="export PYTHONWARNINGS='ignore'"
+alias pywarnings_default="export PYTHONWARNINGS='default'"
+alias pywarnings_all="export PYTHONWARNINGS='all'"
+
 # Social functions
 alias geertspeak="espeak -v mb-en1 -s 100 "
 alias fire="geertspeak 'You are fired!'"
