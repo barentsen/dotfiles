@@ -29,6 +29,20 @@ if ! zgen saved; then
     zgen save
 fi
 
+#################
+# POPULATE $PATH
+#################
+# if tmux is running, the path was already populated
+# lets avoid duplicate entries, it causes havoc when changing python envs
+colonise() {
+    cat $1 | tr "\n" ":"
+}
+# We store %PATH entries in ~/.zsh_path and ~/.zsh_path_local
+for file in ~/.zsh_{path,path_local}; do
+    [ -r "$file" ] && export PATH=`colonise $file`:$PATH
+done
+unset file
+
 ##################
 # ALIASES & LOCALS
 ##################
