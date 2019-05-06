@@ -9,4 +9,4 @@
 /home/gb/bin/mongodb/bin
 /home/gb/.dropbox-dist
 
-/usr/local/Cellar/coreutils/8.17/libexec/gnubin
+/usr/local/opt/coreutils/libexec/gnubin
