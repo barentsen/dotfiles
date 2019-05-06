@@ -37,34 +37,6 @@ for file in ~/.zsh_{aliases,local}; do
     [ -r "$file" ] && source "$file"
 done
 
-#####################
-# ASTRONOMY SOFTWARE
-#####################
-export STARLINK_DIR='/home/gb/bin/starlink'
-IRAFSETUP=~/.iraf/setup.sh
-if [ -e $IRAFSETUP ]; then
-    source $IRAFSETUP
-fi
-#alias iraf='ecl'
-
-##################
-# MACHINE-SPECIFIC
-##################
-# Options specific to Herts
-if [[ $HOST =~ .*herts.* ]]; then
-    # Printing commands
-    alias prnt='lpr -Plj2' # Print in black/white
-    alias prntc='lpr -Pljc3' # Print in colour
-fi
-if [[ $HOST =~ uhppc.* ]]; then
-    alias gaia='/soft/star-namaka-64bit/bin/gaia/gaia_standalone.csh'
-    # Local postgres installation
-    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/gb/bin/pgsql/lib
-    export PGPORT=5433
-    # Where is Java?
-    export JAVA_HOME=/home/gb/bin/java
-fi
-
 ################
 # SHELL OPTIONS
 ################
@@ -92,3 +64,19 @@ if [[ $HOST =~ .*(uhppc|gvm|flux|ec2|xps).* ]]; then
     RAM_USED=`echo $RAM | awk '{print $3}'`
     echo cpu $CPU%, load $LOAD, mem $(echo "scale = 1; $RAM_USED/$RAM_TOTAL*100" | bc)%, disk $DISK
 fi
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/gb/bin/anaconda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/gb/bin/anaconda/etc/profile.d/conda.sh" ]; then
+        . "/home/gb/bin/anaconda/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/gb/bin/anaconda/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
