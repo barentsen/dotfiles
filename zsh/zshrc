@@ -79,18 +79,5 @@ if [[ $HOST =~ .*(uhppc|gvm|flux|ec2|xps).* ]]; then
     echo cpu $CPU%, load $LOAD, mem $(echo "scale = 1; $RAM_USED/$RAM_TOTAL*100" | bc)%, disk $DISK
 fi
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/gb/bin/anaconda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/gb/bin/anaconda/etc/profile.d/conda.sh" ]; then
-        . "/home/gb/bin/anaconda/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/gb/bin/anaconda/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
+# Setup Anaconda Python
+eval "$(/home/gb/bin/anaconda/bin/conda shell.zsh hook)"
