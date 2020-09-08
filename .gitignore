@@ -10,3 +10,4 @@ dotfiles.sublime-workspace
 *.swp
 
 TODO
+*.code-workspace
