@@ -1,6 +1,3 @@
-# Java
-JAVA="java -XX:+UseConcMarkSweepGC"  # system java
-
 # Changing directory shorthands
 alias c="cd"
 alias cd..="cd .."
@@ -21,10 +18,18 @@ alias wgeert='wget --tries=0 --read-timeout=8 --continue -e robots=off --no-pare
 alias ggrep="grep -iHn "
 alias pss="ps auxwf"
 alias apt="sudo apt "
-alias p2="source activate p2"
+
+# Add to clipboard using `command | clip` (requires `apt install xclip`)
+alias clip="xclip -selection c "
 
 # Scientific calculator
 alias calc="ipython -i -c 'import numpy as np; import pandas as pd; import astropy.units as u; import astropy.constants as c'"
+
+# Python shortcuts
+alias ipy="ipython"
+alias serve="python -m http.server"
+alias ssi="python ~/bin/ssi-server/ssi_server.py"
+alias p2="source activate p2"
 
 # Turn Python warning on/off
 alias pywarnings_ignore="export PYTHONWARNINGS='ignore'"
@@ -33,9 +38,7 @@ alias pywarnings_all="export PYTHONWARNINGS='all'"
 
 # Social functions
 alias geertspeak="espeak -v mb-en1 -s 100 "
-alias fire="geertspeak 'You are fired!'"
 alias converse="geertspeak 'Hello!'; read; geertspeak 'I am great!' read; geertspeak 'Are you enjoying the weather?'; read; geertspeak 'Oh I know! It was the same yesterday!'; read; geertspeak 'Oh I see.'; read; geertspeak 'Sounds good to me!'; read; geertspeak 'Ok, see you soon!'"
-
 
 # Git
 alias ga='git add '
@@ -68,17 +71,8 @@ alias geertnetstat='sudo netstat -tulpn'
 # Show a nicer version of top with 0.5s refresh
 alias ht='htop -d 0.5'
 
-# Science tools
-alias ipy="ipython"
-alias je="$JAVA -jar $HOME/bin/jEdit/5.0pre1/jedit.jar"
-alias aladin="nice $JAVA -Xmx2000m -jar $HOME/bin/aladin/Aladin.jar"
-alias astrometrica="wine ~/bin/astrometrica/Astrometrica.exe"
-
-# Python shortcuts
-alias serve="python -m http.server"
-alias ssi="python ~/bin/ssi-server/ssi_server.py"
-
 # TopCat
+JAVA="java -XX:+UseConcMarkSweepGC"  # system java
 alias tc="nice $JAVA -Xmx2000m -classpath $HOME/bin/topcat-full.jar:$HOME/bin/postgresql.jdbc4.jar -Djdbc.drivers=org.postgresql.Driver uk.ac.starlink.topcat.Driver"
 alias stilts="tc -stilts"
 
@@ -88,17 +82,6 @@ alias pglocal="pg_ctl -D $HOME/msc/pgdata -l $HOME/tmp/pg.log "
 alias startmongo="mongod --port 4230 --dbpath $HOME/msc/mongodata --logpath $HOME/tmp/mongodb.log --logappend --fork"
 # Mac: mongod run --config /usr/local/etc/mongod.conf
 alias mongo="mongo --port 4230"
-
-# Radio
-#VLCPLAY="nohup vlc --qt-start-minimized"
-VLCPLAY="nohup vlc"
-alias stubru="$VLCPLAY http://mp3.streampower.be/stubru-high.mp3 2> /dev/null &"
-alias rad1="$VLCPLAY http://mp3.streampower.be/radio1-high.mp3 2> /dev/null &"
-alias radu="$VLCPLAY http://bbc.co.uk/radio/listen/live/ru.asx 2> /dev/null &"
-alias rad5="$VLCPLAY http://bbc.co.uk/radio/listen/live/r5l.asx 2> /dev/null &"
-
-# To get the dual monitor setup at uni working:
-alias screenfix="xrandr --output HDMI-1 --mode 1920x1200 --primary --left-of DVI-I-1 --output DVI-I-1 --mode 1680x1050"
 
 
 #######################
