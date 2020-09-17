@@ -4,9 +4,6 @@
 
 /home/gb/bin/anaconda/bin
 
-/home/gb/bin/pgsql/bin
-/home/gb/bin/tmux/bin
-/home/gb/bin/mongodb/bin
 /home/gb/.dropbox-dist
 
 /usr/local/opt/coreutils/libexec/gnubin
