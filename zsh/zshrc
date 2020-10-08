@@ -79,5 +79,3 @@ if [[ $HOST =~ .*(uhppc|gvm|flux|ec2|xps).* ]]; then
     echo cpu $CPU%, load $LOAD, mem $(echo "scale = 1; $RAM_USED/$RAM_TOTAL*100" | bc)%, disk $DISK
 fi
 
-# Setup Anaconda Python
-eval "$(/home/gb/bin/anaconda/bin/conda shell.zsh hook)"
