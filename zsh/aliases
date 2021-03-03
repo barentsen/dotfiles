@@ -29,7 +29,6 @@ alias calc="ipython -i -c 'import numpy as np; import pandas as pd; import astro
 alias ipy="ipython"
 alias serve="python -m http.server"
 alias ssi="python ~/bin/ssi-server/ssi_server.py"
-alias p2="source activate p2"
 
 # Turn Python warning on/off
 alias pywarnings_ignore="export PYTHONWARNINGS='ignore'"
@@ -56,9 +55,6 @@ alias ta='tmux attach-session -t'
 alias tl='tmux list-session'
 alias tk='tmux kill-server'
 
-# Impressive needs system python
-alias keynote='/usr/bin/python /usr/bin/impressive --nologo -T 200'
-
 # System tools
 alias ls='ls --color=auto'
 alias l='ls -lha --color=auto'
@@ -79,9 +75,6 @@ alias stilts="tc -stilts"
 # Databases
 alias startdb="pg_ctl -D $HOME/msc/pgdata -l $HOME/tmp/pg.log start"
 alias pglocal="pg_ctl -D $HOME/msc/pgdata -l $HOME/tmp/pg.log "
-alias startmongo="mongod --port 4230 --dbpath $HOME/msc/mongodata --logpath $HOME/tmp/mongodb.log --logappend --fork"
-# Mac: mongod run --config /usr/local/etc/mongod.conf
-alias mongo="mongo --port 4230"
 
 
 #######################
@@ -122,30 +115,3 @@ fitsgrab()
     python -c "from astropy.io import fits; fits.open('$1')[$2].writeto('$OUTPUT', clobber=True)"
 }
 
-# `pipe2csv` converts pipe- to comma-delimited csv files
-function pipe2csv() {
-    OUTPUT="$1.csv"
-    echo "Writing $OUTPUT"
-    csvformat --delimiter \| --out-delimiter , $1 > $OUTPUT
-}
-
-# `csv2pipe` converts comma- to pipe-delimited csv files
-function csv2pipe() {
-    OUTPUT="$1.pipe"
-    echo "Writing $OUTPUT"
-    csvformat --delimiter , --out-delimiter \| $1 > $OUTPUT
-}
-
-# `csv2fits` converts csv files into fits format using stilts
-function csv2fits() {
-    OUTPUT="$1.fits"
-    echo "Writing $OUTPUT"
-    stilts tcopy ifmt=csv ofmt=fits-plus $1 $OUTPUT
-}
-
-# `vot2csv` converts VOTable files into csv format using stilts
-function vot2csv() {
-    OUTPUT="$1.csv"
-    echo "Writing $OUTPUT"
-    stilts tcopy ifmt=votable ofmt=csv $1 $OUTPUT
-}
